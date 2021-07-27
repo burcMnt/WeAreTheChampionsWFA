@@ -10,7 +10,7 @@ namespace WeAreTheChampionsWFA.Models
     [Table("TeamColors")]
     public class TeamColor
     {
-        [ForeignKey("Team")]
+       [ForeignKey("Team")]
         public int TeamId { get; set; }
         [ForeignKey("Color")]
         public int ColorId { get; set; }

@@ -65,10 +65,10 @@
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\ProjectContext.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\TeamColor.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProjectContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -14,5 +14,8 @@ namespace WeAreTheChampionsWFA.Models
         public int Id { get; set; }
         [Required,MaxLength(100)]
         public string TeamName { get; set; }
+        public virtual ICollection<Player> Players { get; set; }
+        public virtual ICollection<Color> Colors { get; set; }
+        public virtual ICollection<Match> Matches { get; set; }
     }
 }

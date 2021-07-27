@@ -16,6 +16,7 @@ namespace WeAreTheChampionsWFA.Models
         public int? TeamId { get; set; }
         [Required,MaxLength(100)]
         public string PlayerName { get; set; }
+        public virtual Team Team { get; set; }
 
     }
 }

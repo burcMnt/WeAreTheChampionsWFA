@@ -20,5 +20,6 @@ namespace WeAreTheChampionsWFA.Models
         public int Score1 { get; set; }
         public int Score2 { get; set; }
         public int? Result { get; set; }
+        public virtual ICollection<Team> Teams { get; set; }
     }
 }
