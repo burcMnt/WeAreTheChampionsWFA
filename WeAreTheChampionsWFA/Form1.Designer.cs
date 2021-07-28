@@ -63,7 +63,7 @@ namespace WeAreTheChampionsWFA
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTakimSil = new System.Windows.Forms.Button();
             this.btnTakimEkle = new System.Windows.Forms.Button();
-            this.lstTakimlar = new System.Windows.Forms.ListBox();
+            this.lstTakimAdlari = new System.Windows.Forms.ListBox();
             this.txtTakimAd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -92,6 +92,7 @@ namespace WeAreTheChampionsWFA
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -280,6 +281,7 @@ namespace WeAreTheChampionsWFA
             this.lstTakimOyunculari.Name = "lstTakimOyunculari";
             this.lstTakimOyunculari.Size = new System.Drawing.Size(280, 344);
             this.lstTakimOyunculari.TabIndex = 4;
+            this.lstTakimOyunculari.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTakimAdlari_KeyDown);
             // 
             // cboOyuncuAd
             // 
@@ -362,6 +364,7 @@ namespace WeAreTheChampionsWFA
             this.lstTakiminRengi.Name = "lstTakiminRengi";
             this.lstTakiminRengi.Size = new System.Drawing.Size(280, 364);
             this.lstTakiminRengi.TabIndex = 4;
+            this.lstTakiminRengi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTakimAdlari_KeyDown);
             // 
             // cboRenkAd
             // 
@@ -402,7 +405,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.groupBox2.Controls.Add(this.btnTakimSil);
             this.groupBox2.Controls.Add(this.btnTakimEkle);
-            this.groupBox2.Controls.Add(this.lstTakimlar);
+            this.groupBox2.Controls.Add(this.lstTakimAdlari);
             this.groupBox2.Controls.Add(this.txtTakimAd);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -421,6 +424,7 @@ namespace WeAreTheChampionsWFA
             this.btnTakimSil.TabIndex = 4;
             this.btnTakimSil.Text = "Takım Sil";
             this.btnTakimSil.UseVisualStyleBackColor = true;
+            this.btnTakimSil.Click += new System.EventHandler(this.btnTakimSil_Click);
             // 
             // btnTakimEkle
             // 
@@ -432,17 +436,18 @@ namespace WeAreTheChampionsWFA
             this.btnTakimEkle.UseVisualStyleBackColor = true;
             this.btnTakimEkle.Click += new System.EventHandler(this.btnTakimEkle_Click);
             // 
-            // lstTakimlar
+            // lstTakimAdlari
             // 
-            this.lstTakimlar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lstTakimAdlari.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstTakimlar.FormattingEnabled = true;
-            this.lstTakimlar.ItemHeight = 20;
-            this.lstTakimlar.Location = new System.Drawing.Point(6, 136);
-            this.lstTakimlar.Name = "lstTakimlar";
-            this.lstTakimlar.Size = new System.Drawing.Size(280, 364);
-            this.lstTakimlar.TabIndex = 2;
+            this.lstTakimAdlari.FormattingEnabled = true;
+            this.lstTakimAdlari.ItemHeight = 20;
+            this.lstTakimAdlari.Location = new System.Drawing.Point(6, 136);
+            this.lstTakimAdlari.Name = "lstTakimAdlari";
+            this.lstTakimAdlari.Size = new System.Drawing.Size(280, 364);
+            this.lstTakimAdlari.TabIndex = 2;
+            this.lstTakimAdlari.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTakimAdlari_KeyDown);
             // 
             // txtTakimAd
             // 
@@ -473,6 +478,7 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.pboSecilenRenk);
             this.groupBox6.Controls.Add(this.btnRenkDuzenle);
             this.groupBox6.Controls.Add(this.btnRenkSil);
@@ -496,20 +502,21 @@ namespace WeAreTheChampionsWFA
             // 
             // pboSecilenRenk
             // 
-            this.pboSecilenRenk.Location = new System.Drawing.Point(462, 129);
+            this.pboSecilenRenk.Location = new System.Drawing.Point(356, 137);
             this.pboSecilenRenk.Name = "pboSecilenRenk";
-            this.pboSecilenRenk.Size = new System.Drawing.Size(38, 38);
+            this.pboSecilenRenk.Size = new System.Drawing.Size(144, 30);
             this.pboSecilenRenk.TabIndex = 15;
             this.pboSecilenRenk.TabStop = false;
             // 
             // btnRenkDuzenle
             // 
-            this.btnRenkDuzenle.Location = new System.Drawing.Point(46, 476);
+            this.btnRenkDuzenle.Location = new System.Drawing.Point(203, 476);
             this.btnRenkDuzenle.Name = "btnRenkDuzenle";
             this.btnRenkDuzenle.Size = new System.Drawing.Size(146, 35);
             this.btnRenkDuzenle.TabIndex = 14;
             this.btnRenkDuzenle.Text = "Renk Düzenle";
             this.btnRenkDuzenle.UseVisualStyleBackColor = true;
+            this.btnRenkDuzenle.Click += new System.EventHandler(this.btnRenkDuzenle_Click);
             // 
             // btnRenkSil
             // 
@@ -519,18 +526,21 @@ namespace WeAreTheChampionsWFA
             this.btnRenkSil.TabIndex = 13;
             this.btnRenkSil.Text = "Renk Sil";
             this.btnRenkSil.UseVisualStyleBackColor = true;
+            this.btnRenkSil.Click += new System.EventHandler(this.btnRenkSil_Click);
             // 
             // btnRenkEkle
             // 
-            this.btnRenkEkle.Location = new System.Drawing.Point(345, 129);
+            this.btnRenkEkle.Location = new System.Drawing.Point(46, 473);
             this.btnRenkEkle.Name = "btnRenkEkle";
-            this.btnRenkEkle.Size = new System.Drawing.Size(108, 38);
+            this.btnRenkEkle.Size = new System.Drawing.Size(135, 38);
             this.btnRenkEkle.TabIndex = 10;
             this.btnRenkEkle.Text = "Renk Ekle";
             this.btnRenkEkle.UseVisualStyleBackColor = true;
+            this.btnRenkEkle.Click += new System.EventHandler(this.btnRenkEkle_Click);
             // 
             // lstRenkler
             // 
+            this.lstRenkler.DisplayMember = "ColorName";
             this.lstRenkler.FormattingEnabled = true;
             this.lstRenkler.ItemHeight = 25;
             this.lstRenkler.Location = new System.Drawing.Point(46, 191);
@@ -541,9 +551,9 @@ namespace WeAreTheChampionsWFA
             // pboRenkler
             // 
             this.pboRenkler.Image = global::WeAreTheChampionsWFA.Properties.Resources.colour;
-            this.pboRenkler.Location = new System.Drawing.Point(345, 29);
+            this.pboRenkler.Location = new System.Drawing.Point(356, 49);
             this.pboRenkler.Name = "pboRenkler";
-            this.pboRenkler.Size = new System.Drawing.Size(155, 97);
+            this.pboRenkler.Size = new System.Drawing.Size(139, 82);
             this.pboRenkler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboRenkler.TabIndex = 8;
             this.pboRenkler.TabStop = false;
@@ -725,6 +735,15 @@ namespace WeAreTheChampionsWFA
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(364, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 25);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Renk Paleti";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -795,7 +814,7 @@ namespace WeAreTheChampionsWFA
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnTakimSil;
         private System.Windows.Forms.Button btnTakimEkle;
-        private System.Windows.Forms.ListBox lstTakimlar;
+        private System.Windows.Forms.ListBox lstTakimAdlari;
         private System.Windows.Forms.TextBox txtTakimAd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -822,6 +841,7 @@ namespace WeAreTheChampionsWFA
         private System.Windows.Forms.Button btnRenkDuzenle;
         private System.Windows.Forms.Button btnRenkSil;
         private System.Windows.Forms.PictureBox pboSecilenRenk;
+        private System.Windows.Forms.Label label15;
     }
 }
 
