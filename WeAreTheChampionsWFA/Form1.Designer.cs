@@ -68,6 +68,7 @@ namespace WeAreTheChampionsWFA
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.pboSecilenRenk = new System.Windows.Forms.PictureBox();
             this.btnRenkDuzenle = new System.Windows.Forms.Button();
             this.btnRenkSil = new System.Windows.Forms.Button();
@@ -87,12 +88,9 @@ namespace WeAreTheChampionsWFA
             this.btnOyuncuDuzenle = new System.Windows.Forms.Button();
             this.btnOyuncuSil = new System.Windows.Forms.Button();
             this.btnOyuncuEkle = new System.Windows.Forms.Button();
-            this.cboOyuncuTakimAd = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -158,7 +156,7 @@ namespace WeAreTheChampionsWFA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(761, 119);
+            this.label3.Location = new System.Drawing.Point(205, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 25);
             this.label3.TabIndex = 6;
@@ -167,7 +165,7 @@ namespace WeAreTheChampionsWFA
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(761, 67);
+            this.label2.Location = new System.Drawing.Point(205, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 25);
             this.label2.TabIndex = 5;
@@ -176,7 +174,7 @@ namespace WeAreTheChampionsWFA
             // pboKarsilasmaSil
             // 
             this.pboKarsilasmaSil.Image = global::WeAreTheChampionsWFA.Properties.Resources.delete;
-            this.pboKarsilasmaSil.Location = new System.Drawing.Point(719, 105);
+            this.pboKarsilasmaSil.Location = new System.Drawing.Point(163, 102);
             this.pboKarsilasmaSil.Name = "pboKarsilasmaSil";
             this.pboKarsilasmaSil.Size = new System.Drawing.Size(36, 39);
             this.pboKarsilasmaSil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +184,7 @@ namespace WeAreTheChampionsWFA
             // pboKarsilasmaDuzenle
             // 
             this.pboKarsilasmaDuzenle.Image = global::WeAreTheChampionsWFA.Properties.Resources.settings__2_;
-            this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(721, 67);
+            this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(165, 64);
             this.pboKarsilasmaDuzenle.Name = "pboKarsilasmaDuzenle";
             this.pboKarsilasmaDuzenle.Size = new System.Drawing.Size(25, 25);
             this.pboKarsilasmaDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +194,7 @@ namespace WeAreTheChampionsWFA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(751, 29);
+            this.label1.Location = new System.Drawing.Point(195, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 2;
@@ -205,7 +203,7 @@ namespace WeAreTheChampionsWFA
             // pboKarsilasmaEkle
             // 
             this.pboKarsilasmaEkle.Image = global::WeAreTheChampionsWFA.Properties.Resources.plus;
-            this.pboKarsilasmaEkle.Location = new System.Drawing.Point(720, 29);
+            this.pboKarsilasmaEkle.Location = new System.Drawing.Point(164, 26);
             this.pboKarsilasmaEkle.Name = "pboKarsilasmaEkle";
             this.pboKarsilasmaEkle.Size = new System.Drawing.Size(25, 25);
             this.pboKarsilasmaEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -216,9 +214,9 @@ namespace WeAreTheChampionsWFA
             // 
             this.lviKarsilasma.BackgroundImageTiled = true;
             this.lviKarsilasma.HideSelection = false;
-            this.lviKarsilasma.Location = new System.Drawing.Point(588, 163);
+            this.lviKarsilasma.Location = new System.Drawing.Point(571, 26);
             this.lviKarsilasma.Name = "lviKarsilasma";
-            this.lviKarsilasma.Size = new System.Drawing.Size(334, 317);
+            this.lviKarsilasma.Size = new System.Drawing.Size(351, 454);
             this.lviKarsilasma.TabIndex = 0;
             this.lviKarsilasma.UseCompatibleStateImageBehavior = false;
             // 
@@ -275,6 +273,7 @@ namespace WeAreTheChampionsWFA
             this.lstTakimOyunculari.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstTakimOyunculari.DisplayMember = "PlayerName";
             this.lstTakimOyunculari.FormattingEnabled = true;
             this.lstTakimOyunculari.ItemHeight = 20;
             this.lstTakimOyunculari.Location = new System.Drawing.Point(18, 144);
@@ -285,6 +284,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboOyuncuAd
             // 
+            this.cboOyuncuAd.DisplayMember = "PlayerName";
             this.cboOyuncuAd.FormattingEnabled = true;
             this.cboOyuncuAd.Location = new System.Drawing.Point(132, 67);
             this.cboOyuncuAd.Name = "cboOyuncuAd";
@@ -343,6 +343,7 @@ namespace WeAreTheChampionsWFA
             this.btnTakimRenkSil.TabIndex = 6;
             this.btnTakimRenkSil.Text = "Renk Sil";
             this.btnTakimRenkSil.UseVisualStyleBackColor = true;
+            this.btnTakimRenkSil.Click += new System.EventHandler(this.btnTakimRenkSil_Click);
             // 
             // btnTakimRenkAta
             // 
@@ -352,15 +353,17 @@ namespace WeAreTheChampionsWFA
             this.btnTakimRenkAta.TabIndex = 5;
             this.btnTakimRenkAta.Text = "Renk Ata";
             this.btnTakimRenkAta.UseVisualStyleBackColor = true;
+            this.btnTakimRenkAta.Click += new System.EventHandler(this.btnTakimRenkAta_Click);
             // 
             // lstTakiminRengi
             // 
             this.lstTakiminRengi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstTakiminRengi.DisplayMember = "ColorName";
             this.lstTakiminRengi.FormattingEnabled = true;
             this.lstTakiminRengi.ItemHeight = 20;
-            this.lstTakiminRengi.Location = new System.Drawing.Point(18, 136);
+            this.lstTakiminRengi.Location = new System.Drawing.Point(10, 136);
             this.lstTakiminRengi.Name = "lstTakiminRengi";
             this.lstTakiminRengi.Size = new System.Drawing.Size(280, 364);
             this.lstTakiminRengi.TabIndex = 4;
@@ -368,6 +371,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboRenkAd
             // 
+            this.cboRenkAd.DisplayMember = "ColorName";
             this.cboRenkAd.FormattingEnabled = true;
             this.cboRenkAd.Location = new System.Drawing.Point(121, 64);
             this.cboRenkAd.Name = "cboRenkAd";
@@ -391,6 +395,7 @@ namespace WeAreTheChampionsWFA
             this.cboTakimAd.Name = "cboTakimAd";
             this.cboTakimAd.Size = new System.Drawing.Size(184, 28);
             this.cboTakimAd.TabIndex = 1;
+            this.cboTakimAd.SelectedIndexChanged += new System.EventHandler(this.cboTakimAd_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -499,6 +504,15 @@ namespace WeAreTheChampionsWFA
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Renk Atama";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(364, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 25);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Renk Paleti";
             // 
             // pboSecilenRenk
             // 
@@ -653,8 +667,6 @@ namespace WeAreTheChampionsWFA
             this.groupBox5.Controls.Add(this.btnOyuncuDuzenle);
             this.groupBox5.Controls.Add(this.btnOyuncuSil);
             this.groupBox5.Controls.Add(this.btnOyuncuEkle);
-            this.groupBox5.Controls.Add(this.cboOyuncuTakimAd);
-            this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.lstOyuncular);
             this.groupBox5.Controls.Add(this.txtOyuncuAd);
             this.groupBox5.Controls.Add(this.label9);
@@ -667,63 +679,50 @@ namespace WeAreTheChampionsWFA
             // 
             // btnOyuncuDuzenle
             // 
-            this.btnOyuncuDuzenle.Location = new System.Drawing.Point(382, 460);
+            this.btnOyuncuDuzenle.Location = new System.Drawing.Point(214, 460);
             this.btnOyuncuDuzenle.Name = "btnOyuncuDuzenle";
-            this.btnOyuncuDuzenle.Size = new System.Drawing.Size(124, 30);
+            this.btnOyuncuDuzenle.Size = new System.Drawing.Size(111, 30);
             this.btnOyuncuDuzenle.TabIndex = 10;
             this.btnOyuncuDuzenle.Text = "DÜZENLE";
             this.btnOyuncuDuzenle.UseVisualStyleBackColor = true;
+            this.btnOyuncuDuzenle.Click += new System.EventHandler(this.btnOyuncuDuzenle_Click);
             // 
             // btnOyuncuSil
             // 
-            this.btnOyuncuSil.Location = new System.Drawing.Point(119, 459);
+            this.btnOyuncuSil.Location = new System.Drawing.Point(119, 460);
             this.btnOyuncuSil.Name = "btnOyuncuSil";
             this.btnOyuncuSil.Size = new System.Drawing.Size(82, 31);
             this.btnOyuncuSil.TabIndex = 9;
             this.btnOyuncuSil.Text = "SİL";
             this.btnOyuncuSil.UseVisualStyleBackColor = true;
+            this.btnOyuncuSil.Click += new System.EventHandler(this.btnOyuncuSil_Click);
             // 
             // btnOyuncuEkle
             // 
             this.btnOyuncuEkle.Location = new System.Drawing.Point(17, 460);
             this.btnOyuncuEkle.Name = "btnOyuncuEkle";
-            this.btnOyuncuEkle.Size = new System.Drawing.Size(77, 33);
+            this.btnOyuncuEkle.Size = new System.Drawing.Size(96, 31);
             this.btnOyuncuEkle.TabIndex = 8;
             this.btnOyuncuEkle.Text = "EKLE";
             this.btnOyuncuEkle.UseVisualStyleBackColor = true;
-            // 
-            // cboOyuncuTakimAd
-            // 
-            this.cboOyuncuTakimAd.FormattingEnabled = true;
-            this.cboOyuncuTakimAd.Location = new System.Drawing.Point(290, 75);
-            this.cboOyuncuTakimAd.Name = "cboOyuncuTakimAd";
-            this.cboOyuncuTakimAd.Size = new System.Drawing.Size(216, 33);
-            this.cboOyuncuTakimAd.TabIndex = 5;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(295, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 25);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Takım Adı";
+            this.btnOyuncuEkle.Click += new System.EventHandler(this.btnOyuncuEkle_Click);
             // 
             // lstOyuncular
             // 
             this.lstOyuncular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lstOyuncular.DisplayMember = "PlayerName";
             this.lstOyuncular.FormattingEnabled = true;
             this.lstOyuncular.ItemHeight = 25;
             this.lstOyuncular.Location = new System.Drawing.Point(17, 125);
             this.lstOyuncular.Name = "lstOyuncular";
-            this.lstOyuncular.Size = new System.Drawing.Size(489, 329);
+            this.lstOyuncular.Size = new System.Drawing.Size(308, 329);
             this.lstOyuncular.TabIndex = 3;
             // 
             // txtOyuncuAd
             // 
             this.txtOyuncuAd.Location = new System.Drawing.Point(30, 78);
             this.txtOyuncuAd.Name = "txtOyuncuAd";
-            this.txtOyuncuAd.Size = new System.Drawing.Size(221, 30);
+            this.txtOyuncuAd.Size = new System.Drawing.Size(295, 30);
             this.txtOyuncuAd.TabIndex = 1;
             // 
             // label9
@@ -734,15 +733,6 @@ namespace WeAreTheChampionsWFA
             this.label9.Size = new System.Drawing.Size(148, 25);
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(364, 21);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 25);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Renk Paleti";
             // 
             // Form1
             // 
@@ -821,8 +811,6 @@ namespace WeAreTheChampionsWFA
         private System.Windows.Forms.ListBox lstOyuncular;
         private System.Windows.Forms.TextBox txtOyuncuAd;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cboOyuncuTakimAd;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ListBox lstRenkler;
         private System.Windows.Forms.PictureBox pboRenkler;

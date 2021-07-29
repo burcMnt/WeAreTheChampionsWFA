@@ -21,7 +21,36 @@ namespace WeAreTheChampionsWFA
             TakimlarTabResetle();
             RenkleriListele();
             RenklerTabResetle();
+            OyunculariListele();
+            OyuncularTabResetle();
+            TakiminRenkleriniListele();
 
+        }
+
+        private void TakiminRenkleriniListele()
+        {
+            lstTakiminRengi.DisplayMember = "ColorName";
+            Team takim = (Team)cboTakimAd.SelectedItem;
+            if (takim==null)
+            {
+                lstTakiminRengi.DataSource = null;
+            }
+            else
+            {
+                lstTakiminRengi.DataSource = takim.Colors.ToList();
+            }
+        }
+
+        private void OyuncularTabResetle()
+        {
+            txtOyuncuAd.Clear();
+            lstOyuncular.SelectedIndex = -1;
+            btnOyuncuEkle.Text = "EKLE";
+        }
+
+        private void OyunculariListele()
+        {
+            lstOyuncular.DataSource = db.Players.OrderBy(x => x.PlayerName).ToList();
         }
 
         private void RenklerTabResetle()
@@ -38,6 +67,7 @@ namespace WeAreTheChampionsWFA
         private void RenkleriListele()
         {
             lstRenkler.DataSource = db.Colors.OrderBy(x => x.ColorName).ToList();
+            
         }
 
         private void TakimlarTabResetle()
@@ -57,6 +87,8 @@ namespace WeAreTheChampionsWFA
             lstTakimAdlari.DataSource = db.Teams.ToList();
             cboTakimAd.DataSource = db.Teams.ToList();
             cboTakimAdO.DataSource = db.Teams.ToList();
+            cboRenkAd.DataSource = db.Colors.ToList();
+            cboOyuncuAd.DataSource = db.Players.ToList();
             lstTakimAdlari.DisplayMember = "TeamName";
 
         }
@@ -136,11 +168,20 @@ namespace WeAreTheChampionsWFA
                 duzenlenenRenk.Red = Convert.ToInt32(mtbRDegeri.Text);
                 duzenlenenRenk.Green = Convert.ToInt32(mtbGDegeri.Text);
                 duzenlenenRenk.Blue = Convert.ToInt32(mtbBDegeri.Text);
+                int r = Convert.ToInt32(mtbRDegeri.Text);
+                int g = Convert.ToInt32(mtbGDegeri.Text);
+                int b = Convert.ToInt32(mtbBDegeri.Text);
+                if (r > 255 || g > 255 || b > 255)
+                {
+                    MessageBox.Show("R-G-B değerleri 255 den büyük olamaz, Lütfen yeniden deneyin.");
+                    return;
+                }
             }
 
             db.SaveChanges();
             RenkleriListele();
             RenklerTabResetle();
+            cboOyuncuAd.DataSource = db.Colors.ToList();
 
         }
 
@@ -170,8 +211,95 @@ namespace WeAreTheChampionsWFA
             mtbRDegeri.Text = duzenlenenRenk.Red.ToString();
             mtbGDegeri.Text = duzenlenenRenk.Green.ToString();
             mtbBDegeri.Text = duzenlenenRenk.Blue.ToString();
+            mtbRDegeri.ReadOnly = mtbGDegeri.ReadOnly = mtbBDegeri.ReadOnly = false;
             btnRenkEkle.Text = "Rengi Kaydet";
+            pboSecilenRenk.BackColor = System.Drawing.Color.FromArgb(duzenlenenRenk.Red, duzenlenenRenk.Green, duzenlenenRenk.Blue);
 
+        }
+
+        private void btnOyuncuEkle_Click(object sender, EventArgs e)
+        {
+            if (duzenlenenOyuncu == null)
+            {
+                if (txtOyuncuAd.Text == "")
+                {
+                    MessageBox.Show("Lütfen takım oyuncusunun bilgilerini giriniz.");
+                    return;
+                }
+                db.Players.Add(new Player()
+                {
+                    PlayerName = txtOyuncuAd.Text.Trim()
+                });
+            }
+            else
+            {
+                duzenlenenOyuncu.PlayerName = txtOyuncuAd.Text.Trim();
+            }
+            db.SaveChanges();
+            OyunculariListele();
+            OyuncularTabResetle();
+        }
+
+        private void btnOyuncuSil_Click(object sender, EventArgs e)
+        {
+            if (lstOyuncular.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen silmek için tablodan bir oyuncu seçin.");
+                return;
+            }
+            var secilenOyuncu = (Player)lstOyuncular.SelectedItem;
+            db.Players.Remove(secilenOyuncu);
+            db.SaveChanges();
+            OyunculariListele();
+            OyuncularTabResetle();
+        }
+        Player duzenlenenOyuncu;
+        private void btnOyuncuDuzenle_Click(object sender, EventArgs e)
+        {
+            if (lstOyuncular.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen düzenlemek istediğiniz oyuncu adını seçiniz.");
+                return;
+            }
+            duzenlenenOyuncu = (Player)lstOyuncular.SelectedItem;
+            txtOyuncuAd.Text = duzenlenenOyuncu.PlayerName;
+            btnOyuncuEkle.Text = "KAYDET";
+        }
+
+        private void btnTakimRenkAta_Click(object sender, EventArgs e)
+        {
+            Team takim = (Team)cboTakimAd.SelectedItem;
+            Models.Color renk = (Models.Color)cboRenkAd.SelectedItem;
+            if (takim == null || renk == null)
+            {
+                MessageBox.Show("Lütfen takım adı ve takım rengi seçiniz.");
+                return;
+            }
+            takim.Colors.Add(renk);
+            db.SaveChanges();
+            TakiminRenkleriniListele();
+
+        }
+
+        private void cboTakimAd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TakiminRenkleriniListele();
+            cboRenkAd.SelectedIndex = -1;
+            lstTakiminRengi.SelectedIndex = -1;
+        }
+
+        private void btnTakimRenkSil_Click(object sender, EventArgs e)
+        {
+            Team takim = (Team)cboTakimAd.SelectedItem;
+            Models.Color renk = (Models.Color)lstTakiminRengi.SelectedItem;
+            if (takim == null || renk == null || lstTakiminRengi.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen takım adı ve kaldırılacak takım rengi seçiniz.");
+                return;
+            }
+            takim.Colors.Remove(renk);
+            db.SaveChanges();
+            TakiminRenkleriniListele();
         }
     }
 }
