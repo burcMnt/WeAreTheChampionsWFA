@@ -24,14 +24,29 @@ namespace WeAreTheChampionsWFA
             OyunculariListele();
             OyuncularTabResetle();
             TakiminRenkleriniListele();
+            TakiminOyunculariniListele();
 
+        }
+
+        private void TakiminOyunculariniListele()
+        {
+            lstTakimOyunculari.DisplayMember = "PlayerName";
+            Team takim = (Team)cboTakimAdO.SelectedItem;
+            if (takim == null)
+            {
+                lstTakimOyunculari.DataSource = null;
+            }
+            else
+            {
+                lstTakimOyunculari.DataSource = takim.Players.OrderBy(x => x.PlayerName).ToList();
+            }
         }
 
         private void TakiminRenkleriniListele()
         {
             lstTakiminRengi.DisplayMember = "ColorName";
             Team takim = (Team)cboTakimAd.SelectedItem;
-            if (takim==null)
+            if (takim == null)
             {
                 lstTakiminRengi.DataSource = null;
             }
@@ -46,6 +61,7 @@ namespace WeAreTheChampionsWFA
             txtOyuncuAd.Clear();
             lstOyuncular.SelectedIndex = -1;
             btnOyuncuEkle.Text = "EKLE";
+            btnOyuncuIptal.Visible = false;
         }
 
         private void OyunculariListele()
@@ -62,12 +78,13 @@ namespace WeAreTheChampionsWFA
             lstRenkler.SelectedIndex = -1;
             pboSecilenRenk.BackColor = default;
             btnRenkEkle.Text = "Renk Ekle";
+            btnRenkIptal.Visible = false;
         }
 
         private void RenkleriListele()
         {
             lstRenkler.DataSource = db.Colors.OrderBy(x => x.ColorName).ToList();
-            
+
         }
 
         private void TakimlarTabResetle()
@@ -181,7 +198,8 @@ namespace WeAreTheChampionsWFA
             db.SaveChanges();
             RenkleriListele();
             RenklerTabResetle();
-            cboOyuncuAd.DataSource = db.Colors.ToList();
+            cboRenkAd.DataSource = db.Colors.ToList();
+            cboRenkAd.SelectedIndex = -1;
 
         }
 
@@ -197,6 +215,8 @@ namespace WeAreTheChampionsWFA
             db.SaveChanges();
             RenkleriListele();
             RenklerTabResetle();
+            cboRenkAd.DataSource = db.Colors.ToList();
+            cboRenkAd.SelectedIndex = -1;
         }
         Models.Color duzenlenenRenk;
         private void btnRenkDuzenle_Click(object sender, EventArgs e)
@@ -213,6 +233,7 @@ namespace WeAreTheChampionsWFA
             mtbBDegeri.Text = duzenlenenRenk.Blue.ToString();
             mtbRDegeri.ReadOnly = mtbGDegeri.ReadOnly = mtbBDegeri.ReadOnly = false;
             btnRenkEkle.Text = "Rengi Kaydet";
+            btnRenkIptal.Visible = true;
             pboSecilenRenk.BackColor = System.Drawing.Color.FromArgb(duzenlenenRenk.Red, duzenlenenRenk.Green, duzenlenenRenk.Blue);
 
         }
@@ -238,6 +259,8 @@ namespace WeAreTheChampionsWFA
             db.SaveChanges();
             OyunculariListele();
             OyuncularTabResetle();
+            cboOyuncuAd.DataSource = db.Players.OrderBy(X => X.PlayerName).ToList();
+            cboOyuncuAd.SelectedIndex = -1;
         }
 
         private void btnOyuncuSil_Click(object sender, EventArgs e)
@@ -252,6 +275,8 @@ namespace WeAreTheChampionsWFA
             db.SaveChanges();
             OyunculariListele();
             OyuncularTabResetle();
+            cboOyuncuAd.DataSource = db.Players.OrderBy(X => X.PlayerName).ToList();
+            cboOyuncuAd.SelectedIndex = -1;
         }
         Player duzenlenenOyuncu;
         private void btnOyuncuDuzenle_Click(object sender, EventArgs e)
@@ -264,6 +289,7 @@ namespace WeAreTheChampionsWFA
             duzenlenenOyuncu = (Player)lstOyuncular.SelectedItem;
             txtOyuncuAd.Text = duzenlenenOyuncu.PlayerName;
             btnOyuncuEkle.Text = "KAYDET";
+            btnOyuncuIptal.Visible = true;
         }
 
         private void btnTakimRenkAta_Click(object sender, EventArgs e)
@@ -278,6 +304,8 @@ namespace WeAreTheChampionsWFA
             takim.Colors.Add(renk);
             db.SaveChanges();
             TakiminRenkleriniListele();
+            lstTakiminRengi.SelectedIndex = -1;
+            cboRenkAd.SelectedIndex = -1;
 
         }
 
@@ -292,7 +320,7 @@ namespace WeAreTheChampionsWFA
         {
             Team takim = (Team)cboTakimAd.SelectedItem;
             Models.Color renk = (Models.Color)lstTakiminRengi.SelectedItem;
-            if (takim == null || renk == null || lstTakiminRengi.SelectedIndex == -1)
+            if (takim == null || renk == null)
             {
                 MessageBox.Show("Lütfen takım adı ve kaldırılacak takım rengi seçiniz.");
                 return;
@@ -300,6 +328,54 @@ namespace WeAreTheChampionsWFA
             takim.Colors.Remove(renk);
             db.SaveChanges();
             TakiminRenkleriniListele();
+        }
+
+        private void btnTakimOyuncuAta_Click(object sender, EventArgs e)
+        {
+            Team takimo = (Team)cboTakimAdO.SelectedItem;
+            Player oyuncu = (Player)cboOyuncuAd.SelectedItem;
+            if (takimo == null || oyuncu == null)
+            {
+                MessageBox.Show("Lütfen takım adı ve takım oyuncusunu seçiniz.");
+                return;
+            }
+            takimo.Players.Add(oyuncu);
+            db.SaveChanges();
+            TakiminOyunculariniListele();
+            lstTakimOyunculari.SelectedIndex = -1;
+            cboOyuncuAd.SelectedIndex = -1;
+        }
+
+        private void cboTakimAdO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TakiminOyunculariniListele();
+            cboOyuncuAd.SelectedIndex = -1;
+            lstTakimOyunculari.SelectedIndex = -1;
+        }
+
+        private void btnTakimOyuncuSil_Click(object sender, EventArgs e)
+        {
+            Team takim = (Team)cboTakimAdO.SelectedItem;
+            Player oyuncu = (Player)lstTakimOyunculari.SelectedItem;
+            if (takim == null || oyuncu == null)
+            {
+                MessageBox.Show("Lütfen takım adı ve kaldırılacak takım oyuncusunu seçiniz.");
+                return;
+            }
+            takim.Players.Remove(oyuncu);
+            db.SaveChanges();
+            TakiminOyunculariniListele();
+        }
+
+        private void btnIptal_Click(object sender, EventArgs e)
+        {
+            RenklerTabResetle();
+            
+        }
+
+        private void btnOyuncuIptal_Click(object sender, EventArgs e)
+        {
+            OyuncularTabResetle();
         }
     }
 }

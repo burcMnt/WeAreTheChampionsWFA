@@ -118,28 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="armalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\armalar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1110956" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1110956.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5f62760366a97c79da7eb1f0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5f62760366a97c79da7eb1f0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="color-palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\color-palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="colour" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\colour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="saha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="655393f7e7c0424dba355976f1555889" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\655393f7e7c0424dba355976f1555889.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3ab72746e777400983ad8371a2e6a4e6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3ab72746e777400983ad8371a2e6a4e6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="armalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\armalar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="700_FO38203752_01f55836a9290b702c39bc2cc1a6d244" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\700_FO38203752_01f55836a9290b702c39bc2cc1a6d244.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8127" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="700_FO38203752_01f55836a9290b702c39bc2cc1a6d2441" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\700_FO38203752_01f55836a9290b702c39bc2cc1a6d2441.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
