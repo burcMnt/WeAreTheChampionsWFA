@@ -75,19 +75,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -98,28 +98,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plus.png" />
+    <None Include="Resources\3ab72746e777400983ad8371a2e6a4e6.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settings %282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\700_FO38203752_01f55836a9290b702c39bc2cc1a6d244.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\colour.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\saha.jpg" />
+    <None Include="Resources\190918_soccer_01.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\8127.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3ab72746e777400983ad8371a2e6a4e6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\700_FO38203752_01f55836a9290b702c39bc2cc1a6d244.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -36,20 +36,6 @@ namespace WeAreTheChampionsWFA
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnRenkDuzenle = new System.Windows.Forms.Button();
-            this.btnRenkSil = new System.Windows.Forms.Button();
-            this.btnRenkEkle = new System.Windows.Forms.Button();
-            this.lstRenkler = new System.Windows.Forms.ListBox();
-            this.txtRenkAd = new System.Windows.Forms.TextBox();
-            this.mtbBDegeri = new System.Windows.Forms.MaskedTextBox();
-            this.mtbGDegeri = new System.Windows.Forms.MaskedTextBox();
-            this.mtbRDegeri = new System.Windows.Forms.MaskedTextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -82,21 +68,34 @@ namespace WeAreTheChampionsWFA
             this.lstTakimAdlari = new System.Windows.Forms.ListBox();
             this.txtTakimAd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnRenkIptal = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.pboSecilenRenk = new System.Windows.Forms.PictureBox();
+            this.btnRenkDuzenle = new System.Windows.Forms.Button();
+            this.btnRenkSil = new System.Windows.Forms.Button();
+            this.btnRenkEkle = new System.Windows.Forms.Button();
+            this.lstRenkler = new System.Windows.Forms.ListBox();
             this.pboRenkler = new System.Windows.Forms.PictureBox();
+            this.txtRenkAd = new System.Windows.Forms.TextBox();
+            this.mtbBDegeri = new System.Windows.Forms.MaskedTextBox();
+            this.mtbGDegeri = new System.Windows.Forms.MaskedTextBox();
+            this.mtbRDegeri = new System.Windows.Forms.MaskedTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnOyuncuIptal = new System.Windows.Forms.Button();
             this.btnOyuncuDuzenle = new System.Windows.Forms.Button();
             this.btnOyuncuSil = new System.Windows.Forms.Button();
             this.btnOyuncuEkle = new System.Windows.Forms.Button();
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnRenkIptal = new System.Windows.Forms.Button();
-            this.btnOyuncuIptal = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboKarsilasmaSil)).BeginInit();
@@ -106,6 +105,7 @@ namespace WeAreTheChampionsWFA
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboSecilenRenk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboRenkler)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -120,21 +120,21 @@ namespace WeAreTheChampionsWFA
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(-2, 6);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(983, 589);
+            this.tabControl1.Size = new System.Drawing.Size(1005, 611);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(975, 551);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(997, 573);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Karşılaşmalar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -143,200 +143,21 @@ namespace WeAreTheChampionsWFA
             // 
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(975, 551);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Renkler";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
-            // 
-            this.groupBox6.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.saha;
-            this.groupBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox6.Controls.Add(this.btnRenkIptal);
-            this.groupBox6.Controls.Add(this.label15);
-            this.groupBox6.Controls.Add(this.pboSecilenRenk);
-            this.groupBox6.Controls.Add(this.btnRenkDuzenle);
-            this.groupBox6.Controls.Add(this.btnRenkSil);
-            this.groupBox6.Controls.Add(this.btnRenkEkle);
-            this.groupBox6.Controls.Add(this.lstRenkler);
-            this.groupBox6.Controls.Add(this.pboRenkler);
-            this.groupBox6.Controls.Add(this.txtRenkAd);
-            this.groupBox6.Controls.Add(this.mtbBDegeri);
-            this.groupBox6.Controls.Add(this.mtbGDegeri);
-            this.groupBox6.Controls.Add(this.mtbRDegeri);
-            this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.label13);
-            this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox6.Location = new System.Drawing.Point(6, 6);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox6.Size = new System.Drawing.Size(958, 549);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Renk Atama";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.Info;
-            this.label15.Location = new System.Drawing.Point(364, 21);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 25);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Renk Paleti";
-            // 
-            // btnRenkDuzenle
-            // 
-            this.btnRenkDuzenle.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnRenkDuzenle.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRenkDuzenle.Location = new System.Drawing.Point(221, 476);
-            this.btnRenkDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRenkDuzenle.Name = "btnRenkDuzenle";
-            this.btnRenkDuzenle.Size = new System.Drawing.Size(146, 35);
-            this.btnRenkDuzenle.TabIndex = 14;
-            this.btnRenkDuzenle.Text = "Renk Düzenle";
-            this.btnRenkDuzenle.UseVisualStyleBackColor = false;
-            this.btnRenkDuzenle.Click += new System.EventHandler(this.btnRenkDuzenle_Click);
-            // 
-            // btnRenkSil
-            // 
-            this.btnRenkSil.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnRenkSil.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRenkSil.Location = new System.Drawing.Point(398, 476);
-            this.btnRenkSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRenkSil.Name = "btnRenkSil";
-            this.btnRenkSil.Size = new System.Drawing.Size(139, 35);
-            this.btnRenkSil.TabIndex = 13;
-            this.btnRenkSil.Text = "Renk Sil";
-            this.btnRenkSil.UseVisualStyleBackColor = false;
-            this.btnRenkSil.Click += new System.EventHandler(this.btnRenkSil_Click);
-            // 
-            // btnRenkEkle
-            // 
-            this.btnRenkEkle.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnRenkEkle.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRenkEkle.Location = new System.Drawing.Point(46, 476);
-            this.btnRenkEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRenkEkle.Name = "btnRenkEkle";
-            this.btnRenkEkle.Size = new System.Drawing.Size(134, 34);
-            this.btnRenkEkle.TabIndex = 10;
-            this.btnRenkEkle.Text = "Renk Ekle";
-            this.btnRenkEkle.UseVisualStyleBackColor = false;
-            this.btnRenkEkle.Click += new System.EventHandler(this.btnRenkEkle_Click);
-            // 
-            // lstRenkler
-            // 
-            this.lstRenkler.DisplayMember = "ColorName";
-            this.lstRenkler.FormattingEnabled = true;
-            this.lstRenkler.ItemHeight = 25;
-            this.lstRenkler.Location = new System.Drawing.Point(46, 191);
-            this.lstRenkler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lstRenkler.Name = "lstRenkler";
-            this.lstRenkler.Size = new System.Drawing.Size(491, 279);
-            this.lstRenkler.TabIndex = 9;
-            // 
-            // txtRenkAd
-            // 
-            this.txtRenkAd.Location = new System.Drawing.Point(138, 32);
-            this.txtRenkAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtRenkAd.Name = "txtRenkAd";
-            this.txtRenkAd.Size = new System.Drawing.Size(179, 30);
-            this.txtRenkAd.TabIndex = 7;
-            // 
-            // mtbBDegeri
-            // 
-            this.mtbBDegeri.HidePromptOnLeave = true;
-            this.mtbBDegeri.Location = new System.Drawing.Point(138, 138);
-            this.mtbBDegeri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mtbBDegeri.Mask = "000";
-            this.mtbBDegeri.Name = "mtbBDegeri";
-            this.mtbBDegeri.ReadOnly = true;
-            this.mtbBDegeri.Size = new System.Drawing.Size(179, 30);
-            this.mtbBDegeri.TabIndex = 6;
-            this.mtbBDegeri.ValidatingType = typeof(int);
-            // 
-            // mtbGDegeri
-            // 
-            this.mtbGDegeri.HidePromptOnLeave = true;
-            this.mtbGDegeri.Location = new System.Drawing.Point(138, 101);
-            this.mtbGDegeri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mtbGDegeri.Mask = "000";
-            this.mtbGDegeri.Name = "mtbGDegeri";
-            this.mtbGDegeri.ReadOnly = true;
-            this.mtbGDegeri.Size = new System.Drawing.Size(179, 30);
-            this.mtbGDegeri.TabIndex = 5;
-            this.mtbGDegeri.ValidatingType = typeof(int);
-            // 
-            // mtbRDegeri
-            // 
-            this.mtbRDegeri.HidePromptOnLeave = true;
-            this.mtbRDegeri.Location = new System.Drawing.Point(138, 65);
-            this.mtbRDegeri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mtbRDegeri.Mask = "000";
-            this.mtbRDegeri.Name = "mtbRDegeri";
-            this.mtbRDegeri.ReadOnly = true;
-            this.mtbRDegeri.Size = new System.Drawing.Size(179, 30);
-            this.mtbRDegeri.TabIndex = 4;
-            this.mtbRDegeri.ValidatingType = typeof(int);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.Info;
-            this.label14.Location = new System.Drawing.Point(41, 135);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 25);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "B Değeri";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.Info;
-            this.label13.Location = new System.Drawing.Point(41, 101);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 25);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "G Değeri";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.Info;
-            this.label12.Location = new System.Drawing.Point(44, 68);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "R Değeri";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.Info;
-            this.label11.Location = new System.Drawing.Point(41, 40);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 25);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Renk Adı";
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(975, 551);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Oyuncular";
@@ -354,11 +175,11 @@ namespace WeAreTheChampionsWFA
             this.groupBox1.Controls.Add(this.pboKarsilasmaEkle);
             this.groupBox1.Controls.Add(this.lviKarsilasma);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(-4, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(967, 562);
+            this.groupBox1.Size = new System.Drawing.Size(1005, 573);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Karşılaşma";
@@ -367,7 +188,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(797, 461);
+            this.label3.Location = new System.Drawing.Point(797, 499);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 25);
@@ -378,7 +199,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(73, 112);
+            this.label2.Location = new System.Drawing.Point(61, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 25);
@@ -387,8 +208,9 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaSil
             // 
-            this.pboKarsilasmaSil.Image = global::WeAreTheChampionsWFA.Properties.Resources.delete;
-            this.pboKarsilasmaSil.Location = new System.Drawing.Point(755, 447);
+            this.pboKarsilasmaSil.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.delete;
+            this.pboKarsilasmaSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pboKarsilasmaSil.Location = new System.Drawing.Point(755, 485);
             this.pboKarsilasmaSil.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaSil.Name = "pboKarsilasmaSil";
             this.pboKarsilasmaSil.Size = new System.Drawing.Size(36, 39);
@@ -398,7 +220,8 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaDuzenle
             // 
-            this.pboKarsilasmaDuzenle.Image = global::WeAreTheChampionsWFA.Properties.Resources.settings__2_;
+            this.pboKarsilasmaDuzenle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.settings__2_;
+            this.pboKarsilasmaDuzenle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(32, 112);
             this.pboKarsilasmaDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaDuzenle.Name = "pboKarsilasmaDuzenle";
@@ -411,7 +234,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(699, 112);
+            this.label1.Location = new System.Drawing.Point(744, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 25);
@@ -420,8 +243,9 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaEkle
             // 
-            this.pboKarsilasmaEkle.Image = global::WeAreTheChampionsWFA.Properties.Resources.plus;
-            this.pboKarsilasmaEkle.Location = new System.Drawing.Point(669, 112);
+            this.pboKarsilasmaEkle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.plus;
+            this.pboKarsilasmaEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pboKarsilasmaEkle.Location = new System.Drawing.Point(944, 112);
             this.pboKarsilasmaEkle.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaEkle.Name = "pboKarsilasmaEkle";
             this.pboKarsilasmaEkle.Size = new System.Drawing.Size(25, 25);
@@ -433,16 +257,16 @@ namespace WeAreTheChampionsWFA
             // 
             this.lviKarsilasma.BackgroundImageTiled = true;
             this.lviKarsilasma.HideSelection = false;
-            this.lviKarsilasma.Location = new System.Drawing.Point(32, 225);
+            this.lviKarsilasma.Location = new System.Drawing.Point(21, 225);
             this.lviKarsilasma.Margin = new System.Windows.Forms.Padding(2);
             this.lviKarsilasma.Name = "lviKarsilasma";
-            this.lviKarsilasma.Size = new System.Drawing.Size(915, 210);
+            this.lviKarsilasma.Size = new System.Drawing.Size(963, 239);
             this.lviKarsilasma.TabIndex = 0;
             this.lviKarsilasma.UseCompatibleStateImageBehavior = false;
             // 
             // tabPage2
             // 
-            this.tabPage2.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d2441;
+            this.tabPage2.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d244;
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);
@@ -742,26 +566,222 @@ namespace WeAreTheChampionsWFA
             this.label4.TabIndex = 0;
             this.label4.Text = "Takım Adı :";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._190918_soccer_01;
+            this.groupBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox6.Controls.Add(this.btnRenkIptal);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.pboSecilenRenk);
+            this.groupBox6.Controls.Add(this.btnRenkDuzenle);
+            this.groupBox6.Controls.Add(this.btnRenkSil);
+            this.groupBox6.Controls.Add(this.btnRenkEkle);
+            this.groupBox6.Controls.Add(this.lstRenkler);
+            this.groupBox6.Controls.Add(this.pboRenkler);
+            this.groupBox6.Controls.Add(this.txtRenkAd);
+            this.groupBox6.Controls.Add(this.mtbBDegeri);
+            this.groupBox6.Controls.Add(this.mtbGDegeri);
+            this.groupBox6.Controls.Add(this.mtbRDegeri);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox6.Location = new System.Drawing.Point(6, 0);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Size = new System.Drawing.Size(973, 555);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Renk Atama";
+            // 
+            // btnRenkIptal
+            // 
+            this.btnRenkIptal.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnRenkIptal.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRenkIptal.Location = new System.Drawing.Point(531, 150);
+            this.btnRenkIptal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRenkIptal.Name = "btnRenkIptal";
+            this.btnRenkIptal.Size = new System.Drawing.Size(144, 35);
+            this.btnRenkIptal.TabIndex = 17;
+            this.btnRenkIptal.Text = "İPTAL";
+            this.btnRenkIptal.UseVisualStyleBackColor = false;
+            this.btnRenkIptal.Visible = false;
+            this.btnRenkIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.Info;
+            this.label15.Location = new System.Drawing.Point(364, 21);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 25);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Renk Paleti";
+            // 
             // pboSecilenRenk
             // 
-            this.pboSecilenRenk.Location = new System.Drawing.Point(356, 138);
+            this.pboSecilenRenk.Location = new System.Drawing.Point(357, 148);
             this.pboSecilenRenk.Margin = new System.Windows.Forms.Padding(2);
             this.pboSecilenRenk.Name = "pboSecilenRenk";
-            this.pboSecilenRenk.Size = new System.Drawing.Size(144, 30);
+            this.pboSecilenRenk.Size = new System.Drawing.Size(146, 37);
             this.pboSecilenRenk.TabIndex = 15;
             this.pboSecilenRenk.TabStop = false;
             // 
+            // btnRenkDuzenle
+            // 
+            this.btnRenkDuzenle.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnRenkDuzenle.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRenkDuzenle.Location = new System.Drawing.Point(531, 111);
+            this.btnRenkDuzenle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRenkDuzenle.Name = "btnRenkDuzenle";
+            this.btnRenkDuzenle.Size = new System.Drawing.Size(144, 35);
+            this.btnRenkDuzenle.TabIndex = 14;
+            this.btnRenkDuzenle.Text = "Renk Düzenle";
+            this.btnRenkDuzenle.UseVisualStyleBackColor = false;
+            this.btnRenkDuzenle.Click += new System.EventHandler(this.btnRenkDuzenle_Click);
+            // 
+            // btnRenkSil
+            // 
+            this.btnRenkSil.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnRenkSil.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRenkSil.Location = new System.Drawing.Point(531, 73);
+            this.btnRenkSil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRenkSil.Name = "btnRenkSil";
+            this.btnRenkSil.Size = new System.Drawing.Size(144, 35);
+            this.btnRenkSil.TabIndex = 13;
+            this.btnRenkSil.Text = "Renk Sil";
+            this.btnRenkSil.UseVisualStyleBackColor = false;
+            this.btnRenkSil.Click += new System.EventHandler(this.btnRenkSil_Click);
+            // 
+            // btnRenkEkle
+            // 
+            this.btnRenkEkle.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnRenkEkle.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRenkEkle.Location = new System.Drawing.Point(531, 35);
+            this.btnRenkEkle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRenkEkle.Name = "btnRenkEkle";
+            this.btnRenkEkle.Size = new System.Drawing.Size(144, 34);
+            this.btnRenkEkle.TabIndex = 10;
+            this.btnRenkEkle.Text = "Renk Ekle";
+            this.btnRenkEkle.UseVisualStyleBackColor = false;
+            this.btnRenkEkle.Click += new System.EventHandler(this.btnRenkEkle_Click);
+            // 
+            // lstRenkler
+            // 
+            this.lstRenkler.BackColor = System.Drawing.Color.Black;
+            this.lstRenkler.DisplayMember = "ColorName";
+            this.lstRenkler.ForeColor = System.Drawing.Color.White;
+            this.lstRenkler.FormattingEnabled = true;
+            this.lstRenkler.ItemHeight = 25;
+            this.lstRenkler.Location = new System.Drawing.Point(726, 27);
+            this.lstRenkler.Margin = new System.Windows.Forms.Padding(2);
+            this.lstRenkler.Name = "lstRenkler";
+            this.lstRenkler.Size = new System.Drawing.Size(211, 479);
+            this.lstRenkler.TabIndex = 9;
+            // 
             // pboRenkler
             // 
-            this.pboRenkler.Image = global::WeAreTheChampionsWFA.Properties.Resources.colour;
-            this.pboRenkler.Location = new System.Drawing.Point(356, 49);
+            this.pboRenkler.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.colour;
+            this.pboRenkler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pboRenkler.Location = new System.Drawing.Point(357, 48);
             this.pboRenkler.Margin = new System.Windows.Forms.Padding(2);
             this.pboRenkler.Name = "pboRenkler";
-            this.pboRenkler.Size = new System.Drawing.Size(139, 82);
+            this.pboRenkler.Size = new System.Drawing.Size(146, 96);
             this.pboRenkler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboRenkler.TabIndex = 8;
             this.pboRenkler.TabStop = false;
             this.pboRenkler.Click += new System.EventHandler(this.pboRenkler_Click);
+            // 
+            // txtRenkAd
+            // 
+            this.txtRenkAd.Location = new System.Drawing.Point(138, 32);
+            this.txtRenkAd.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRenkAd.Name = "txtRenkAd";
+            this.txtRenkAd.Size = new System.Drawing.Size(179, 30);
+            this.txtRenkAd.TabIndex = 7;
+            // 
+            // mtbBDegeri
+            // 
+            this.mtbBDegeri.HidePromptOnLeave = true;
+            this.mtbBDegeri.Location = new System.Drawing.Point(138, 138);
+            this.mtbBDegeri.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbBDegeri.Mask = "000";
+            this.mtbBDegeri.Name = "mtbBDegeri";
+            this.mtbBDegeri.ReadOnly = true;
+            this.mtbBDegeri.Size = new System.Drawing.Size(179, 30);
+            this.mtbBDegeri.TabIndex = 6;
+            this.mtbBDegeri.ValidatingType = typeof(int);
+            // 
+            // mtbGDegeri
+            // 
+            this.mtbGDegeri.HidePromptOnLeave = true;
+            this.mtbGDegeri.Location = new System.Drawing.Point(138, 101);
+            this.mtbGDegeri.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbGDegeri.Mask = "000";
+            this.mtbGDegeri.Name = "mtbGDegeri";
+            this.mtbGDegeri.ReadOnly = true;
+            this.mtbGDegeri.Size = new System.Drawing.Size(179, 30);
+            this.mtbGDegeri.TabIndex = 5;
+            this.mtbGDegeri.ValidatingType = typeof(int);
+            // 
+            // mtbRDegeri
+            // 
+            this.mtbRDegeri.HidePromptOnLeave = true;
+            this.mtbRDegeri.Location = new System.Drawing.Point(138, 65);
+            this.mtbRDegeri.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbRDegeri.Mask = "000";
+            this.mtbRDegeri.Name = "mtbRDegeri";
+            this.mtbRDegeri.ReadOnly = true;
+            this.mtbRDegeri.Size = new System.Drawing.Size(179, 30);
+            this.mtbRDegeri.TabIndex = 4;
+            this.mtbRDegeri.ValidatingType = typeof(int);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.Info;
+            this.label14.Location = new System.Drawing.Point(41, 135);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 25);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "B Değeri";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.Info;
+            this.label13.Location = new System.Drawing.Point(41, 101);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 25);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "G Değeri";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.Info;
+            this.label12.Location = new System.Drawing.Point(44, 68);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "R Değeri";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.Info;
+            this.label11.Location = new System.Drawing.Point(41, 40);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(91, 25);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Renk Adı";
             // 
             // groupBox5
             // 
@@ -783,6 +803,20 @@ namespace WeAreTheChampionsWFA
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Oyuncu Oluşturma";
+            // 
+            // btnOyuncuIptal
+            // 
+            this.btnOyuncuIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnOyuncuIptal.ForeColor = System.Drawing.Color.White;
+            this.btnOyuncuIptal.Location = new System.Drawing.Point(380, 504);
+            this.btnOyuncuIptal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOyuncuIptal.Name = "btnOyuncuIptal";
+            this.btnOyuncuIptal.Size = new System.Drawing.Size(120, 30);
+            this.btnOyuncuIptal.TabIndex = 11;
+            this.btnOyuncuIptal.Text = "İPTAL";
+            this.btnOyuncuIptal.UseVisualStyleBackColor = false;
+            this.btnOyuncuIptal.Visible = false;
+            this.btnOyuncuIptal.Click += new System.EventHandler(this.btnOyuncuIptal_Click);
             // 
             // btnOyuncuDuzenle
             // 
@@ -856,34 +890,6 @@ namespace WeAreTheChampionsWFA
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
             // 
-            // btnRenkIptal
-            // 
-            this.btnRenkIptal.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnRenkIptal.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRenkIptal.Location = new System.Drawing.Point(579, 475);
-            this.btnRenkIptal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRenkIptal.Name = "btnRenkIptal";
-            this.btnRenkIptal.Size = new System.Drawing.Size(139, 35);
-            this.btnRenkIptal.TabIndex = 17;
-            this.btnRenkIptal.Text = "İPTAL";
-            this.btnRenkIptal.UseVisualStyleBackColor = false;
-            this.btnRenkIptal.Visible = false;
-            this.btnRenkIptal.Click += new System.EventHandler(this.btnIptal_Click);
-            // 
-            // btnOyuncuIptal
-            // 
-            this.btnOyuncuIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnOyuncuIptal.ForeColor = System.Drawing.Color.White;
-            this.btnOyuncuIptal.Location = new System.Drawing.Point(380, 504);
-            this.btnOyuncuIptal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOyuncuIptal.Name = "btnOyuncuIptal";
-            this.btnOyuncuIptal.Size = new System.Drawing.Size(120, 30);
-            this.btnOyuncuIptal.TabIndex = 11;
-            this.btnOyuncuIptal.Text = "İPTAL";
-            this.btnOyuncuIptal.UseVisualStyleBackColor = false;
-            this.btnOyuncuIptal.Visible = false;
-            this.btnOyuncuIptal.Click += new System.EventHandler(this.btnOyuncuIptal_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -897,8 +903,6 @@ namespace WeAreTheChampionsWFA
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -912,6 +916,8 @@ namespace WeAreTheChampionsWFA
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboSecilenRenk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboRenkler)).EndInit();
             this.groupBox5.ResumeLayout(false);
