@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeAreTheChampionsWFA.Models;
+using WMPLib;
 
 namespace WeAreTheChampionsWFA
 {
     public partial class Form1 : Form
     {
         ProjectContext db = new ProjectContext();
+        WMPLib.WindowsMediaPlayer muzik = new WMPLib.WindowsMediaPlayer();
         public Form1()
         {
             InitializeComponent();
+            muzik.URL = "uefa.mp3";
             TakimlariListele();
             TakimlarTabResetle();
             RenkleriListele();
@@ -367,15 +370,30 @@ namespace WeAreTheChampionsWFA
             TakiminOyunculariniListele();
         }
 
-        private void btnIptal_Click(object sender, EventArgs e)
-        {
-            RenklerTabResetle();
-            
-        }
-
         private void btnOyuncuIptal_Click(object sender, EventArgs e)
         {
             OyuncularTabResetle();
+            duzenlenenOyuncu = null;
+        }
+
+        private void btnRenkIptal_Click(object sender, EventArgs e)
+        {
+            RenklerTabResetle();
+            duzenlenenRenk = null;
+        }
+
+        private void chbMuzik_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbMuzik.Checked)
+            {
+                chbMuzik.Text = "Sound Off";
+                muzik.controls.play();
+            }
+            else
+            {
+                chbMuzik.Text = "Sound On";
+                muzik.controls.stop();
+            }
         }
     }
 }

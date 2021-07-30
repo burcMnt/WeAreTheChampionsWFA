@@ -38,6 +38,7 @@ namespace WeAreTheChampionsWFA
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chbMuzik = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pboKarsilasmaSil = new System.Windows.Forms.PictureBox();
@@ -146,7 +147,7 @@ namespace WeAreTheChampionsWFA
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(975, 551);
+            this.tabPage3.Size = new System.Drawing.Size(997, 573);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Renkler";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -154,11 +155,12 @@ namespace WeAreTheChampionsWFA
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox5);
+            this.tabPage4.ForeColor = System.Drawing.Color.Blue;
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(975, 551);
+            this.tabPage4.Size = new System.Drawing.Size(997, 573);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Oyuncular";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -167,6 +169,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.groupBox1.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._3ab72746e777400983ad8371a2e6a4e6;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.chbMuzik);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pboKarsilasmaSil);
@@ -184,11 +187,23 @@ namespace WeAreTheChampionsWFA
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Karşılaşma";
             // 
+            // chbMuzik
+            // 
+            this.chbMuzik.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chbMuzik.BackColor = System.Drawing.Color.DodgerBlue;
+            this.chbMuzik.Location = new System.Drawing.Point(4, 0);
+            this.chbMuzik.Name = "chbMuzik";
+            this.chbMuzik.Size = new System.Drawing.Size(112, 40);
+            this.chbMuzik.TabIndex = 7;
+            this.chbMuzik.Text = "Sound Off";
+            this.chbMuzik.UseVisualStyleBackColor = false;
+            this.chbMuzik.CheckedChanged += new System.EventHandler(this.chbMuzik_CheckedChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(797, 499);
+            this.label3.Location = new System.Drawing.Point(470, 526);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 25);
@@ -208,24 +223,24 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaSil
             // 
-            this.pboKarsilasmaSil.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.delete;
+            this.pboKarsilasmaSil.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.football_player_close_up_with_delete_cross_symbol;
             this.pboKarsilasmaSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pboKarsilasmaSil.Location = new System.Drawing.Point(755, 485);
+            this.pboKarsilasmaSil.Location = new System.Drawing.Point(424, 511);
             this.pboKarsilasmaSil.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaSil.Name = "pboKarsilasmaSil";
-            this.pboKarsilasmaSil.Size = new System.Drawing.Size(36, 39);
+            this.pboKarsilasmaSil.Size = new System.Drawing.Size(42, 50);
             this.pboKarsilasmaSil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboKarsilasmaSil.TabIndex = 4;
             this.pboKarsilasmaSil.TabStop = false;
             // 
             // pboKarsilasmaDuzenle
             // 
-            this.pboKarsilasmaDuzenle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.settings__2_;
+            this.pboKarsilasmaDuzenle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.soccer;
             this.pboKarsilasmaDuzenle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(32, 112);
+            this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(21, 95);
             this.pboKarsilasmaDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaDuzenle.Name = "pboKarsilasmaDuzenle";
-            this.pboKarsilasmaDuzenle.Size = new System.Drawing.Size(25, 25);
+            this.pboKarsilasmaDuzenle.Size = new System.Drawing.Size(41, 42);
             this.pboKarsilasmaDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboKarsilasmaDuzenle.TabIndex = 3;
             this.pboKarsilasmaDuzenle.TabStop = false;
@@ -243,12 +258,12 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaEkle
             // 
-            this.pboKarsilasmaEkle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.plus;
+            this.pboKarsilasmaEkle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.soccer_field;
             this.pboKarsilasmaEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pboKarsilasmaEkle.Location = new System.Drawing.Point(944, 112);
+            this.pboKarsilasmaEkle.Location = new System.Drawing.Point(944, 95);
             this.pboKarsilasmaEkle.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaEkle.Name = "pboKarsilasmaEkle";
-            this.pboKarsilasmaEkle.Size = new System.Drawing.Size(25, 25);
+            this.pboKarsilasmaEkle.Size = new System.Drawing.Size(53, 64);
             this.pboKarsilasmaEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboKarsilasmaEkle.TabIndex = 1;
             this.pboKarsilasmaEkle.TabStop = false;
@@ -274,7 +289,7 @@ namespace WeAreTheChampionsWFA
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(975, 551);
+            this.tabPage2.Size = new System.Drawing.Size(997, 573);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Takımlar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -608,7 +623,7 @@ namespace WeAreTheChampionsWFA
             this.btnRenkIptal.Text = "İPTAL";
             this.btnRenkIptal.UseVisualStyleBackColor = false;
             this.btnRenkIptal.Visible = false;
-            this.btnRenkIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            this.btnRenkIptal.Click += new System.EventHandler(this.btnRenkIptal_Click);
             // 
             // label15
             // 
@@ -679,7 +694,7 @@ namespace WeAreTheChampionsWFA
             this.lstRenkler.Location = new System.Drawing.Point(726, 27);
             this.lstRenkler.Margin = new System.Windows.Forms.Padding(2);
             this.lstRenkler.Name = "lstRenkler";
-            this.lstRenkler.Size = new System.Drawing.Size(211, 479);
+            this.lstRenkler.Size = new System.Drawing.Size(226, 479);
             this.lstRenkler.TabIndex = 9;
             // 
             // pboRenkler
@@ -795,11 +810,11 @@ namespace WeAreTheChampionsWFA
             this.groupBox5.Controls.Add(this.txtOyuncuAd);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(968, 552);
+            this.groupBox5.Size = new System.Drawing.Size(1001, 569);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Oyuncu Oluşturma";
@@ -988,6 +1003,7 @@ namespace WeAreTheChampionsWFA
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnRenkIptal;
         private System.Windows.Forms.Button btnOyuncuIptal;
+        private System.Windows.Forms.CheckBox chbMuzik;
     }
 }
 
