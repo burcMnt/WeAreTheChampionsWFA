@@ -190,7 +190,9 @@ namespace WeAreTheChampionsWFA
             // chbMuzik
             // 
             this.chbMuzik.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chbMuzik.BackColor = System.Drawing.Color.DodgerBlue;
+            this.chbMuzik.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.chbMuzik.Checked = true;
+            this.chbMuzik.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbMuzik.Location = new System.Drawing.Point(4, 0);
             this.chbMuzik.Name = "chbMuzik";
             this.chbMuzik.Size = new System.Drawing.Size(112, 40);
@@ -214,7 +216,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(61, 112);
+            this.label2.Location = new System.Drawing.Point(66, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 25);
@@ -237,10 +239,10 @@ namespace WeAreTheChampionsWFA
             // 
             this.pboKarsilasmaDuzenle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.soccer;
             this.pboKarsilasmaDuzenle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(21, 95);
+            this.pboKarsilasmaDuzenle.Location = new System.Drawing.Point(10, 95);
             this.pboKarsilasmaDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaDuzenle.Name = "pboKarsilasmaDuzenle";
-            this.pboKarsilasmaDuzenle.Size = new System.Drawing.Size(41, 42);
+            this.pboKarsilasmaDuzenle.Size = new System.Drawing.Size(52, 55);
             this.pboKarsilasmaDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboKarsilasmaDuzenle.TabIndex = 3;
             this.pboKarsilasmaDuzenle.TabStop = false;
@@ -267,12 +269,13 @@ namespace WeAreTheChampionsWFA
             this.pboKarsilasmaEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboKarsilasmaEkle.TabIndex = 1;
             this.pboKarsilasmaEkle.TabStop = false;
+            this.pboKarsilasmaEkle.Click += new System.EventHandler(this.pboKarsilasmaEkle_Click);
             // 
             // lviKarsilasma
             // 
             this.lviKarsilasma.BackgroundImageTiled = true;
             this.lviKarsilasma.HideSelection = false;
-            this.lviKarsilasma.Location = new System.Drawing.Point(21, 225);
+            this.lviKarsilasma.Location = new System.Drawing.Point(24, 257);
             this.lviKarsilasma.Margin = new System.Windows.Forms.Padding(2);
             this.lviKarsilasma.Name = "lviKarsilasma";
             this.lviKarsilasma.Size = new System.Drawing.Size(963, 239);
@@ -282,6 +285,7 @@ namespace WeAreTheChampionsWFA
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d244;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);

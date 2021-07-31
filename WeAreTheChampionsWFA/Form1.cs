@@ -395,5 +395,11 @@ namespace WeAreTheChampionsWFA
                 muzik.controls.stop();
             }
         }
+
+        private void pboKarsilasmaEkle_Click(object sender, EventArgs e)
+        {
+            var karsilasmaForm = new KarsilasmaForm(db);
+            karsilasmaForm.ShowDialog();
+        }
     }
 }
