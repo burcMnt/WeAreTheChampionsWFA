@@ -101,13 +101,16 @@ namespace WeAreTheChampionsWFA
             lstTakimAdlari.SelectedIndex = -1;
             lstTakiminRengi.SelectedIndex = -1;
             lstTakimOyunculari.SelectedIndex = -1;
+            btnTakimEkle.Text = "Takım Ekle";
+            btnTakimIptal.Visible = false;
+
         }
 
         private void TakimlariListele()
         {
-            lstTakimAdlari.DataSource = db.Teams.ToList();
-            cboTakimAd.DataSource = db.Teams.ToList();
-            cboTakimAdO.DataSource = db.Teams.ToList();
+            lstTakimAdlari.DataSource = db.Teams.OrderBy(x => x.TeamName).ToList();
+            cboTakimAd.DataSource = db.Teams.OrderBy(x => x.TeamName).ToList();
+            cboTakimAdO.DataSource = db.Teams.OrderBy(x => x.TeamName).ToList();
             cboRenkAd.DataSource = db.Colors.ToList();
             cboOyuncuAd.DataSource = db.Players.ToList();
             lstTakimAdlari.DisplayMember = "TeamName";
@@ -127,15 +130,25 @@ namespace WeAreTheChampionsWFA
 
         private void btnTakimEkle_Click(object sender, EventArgs e)
         {
-            var takimAd = txtTakimAd.Text.Trim();
-            if (takimAd == "")
+            if (duzenlenenTakim == null)
             {
-                MessageBox.Show("Lütfen bir takım adı giriniz.");
-                return;
+
+                var takimAd = txtTakimAd.Text.Trim();
+                if (takimAd == "")
+                {
+                    MessageBox.Show("Lütfen bir takım adı giriniz.");
+                    return;
+                }
+                db.Teams.Add(new Team() { TeamName = takimAd });
             }
-            db.Teams.Add(new Team() { TeamName = takimAd });
+            else
+            {
+                duzenlenenTakim.TeamName = txtTakimAd.Text.Trim();
+            }
+
             db.SaveChanges();
             txtTakimAd.Clear();
+            duzenlenenTakim = null;
             TakimlariListele();
             TakimlarTabResetle();
         }
@@ -152,7 +165,25 @@ namespace WeAreTheChampionsWFA
             db.SaveChanges();
             TakimlariListele();
             TakimlarTabResetle();
-
+            MaclariYukle();
+        }
+        Team duzenlenenTakim;
+        private void btnTakimDuzenle_Click(object sender, EventArgs e)
+        {
+            if (lstTakimAdlari.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen düzenlemek için listeden bir takım adı seçiniz.");
+                return;
+            }
+            duzenlenenTakim = (Team)lstTakimAdlari.SelectedItem;
+            txtTakimAd.Text = duzenlenenTakim.TeamName;
+            btnTakimEkle.Text = "KAYDET";
+            btnTakimIptal.Visible = true;
+        }
+        private void btnTakimIptal_Click(object sender, EventArgs e)
+        {
+            TakimlarTabResetle();
+            duzenlenenTakim = null;
         }
 
         private void lstTakimAdlari_KeyDown(object sender, KeyEventArgs e)
@@ -416,19 +447,55 @@ namespace WeAreTheChampionsWFA
 
         private void MaclariYukle()
         {
-            var takim = new Match();
+
             lviKarsilasma.Items.Clear();
-            foreach (Match item in db.Matches)
+            foreach (Match item in db.Matches.ToList())
             {
                 ListViewItem lvi = new ListViewItem(item.MatchTime.ToShortDateString());
-                lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
-                lvi.SubItems.Add(item.Team1Id.ToString());
-                lvi.SubItems.Add(item.Team2Id.ToString());
-                lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
-                lvi.SubItems.Add(item.Result.ToString());
-                lvi.Tag = item;
-                lviKarsilasma.Items.Add(lvi);
+                if (item.Team1Id == null && item.Team2Id == null)
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+                else if (item.Team1Id == null)
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add(item.Team2.TeamName.ToString());
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+                else if (item.Team2Id == null)
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add(item.Team1.TeamName.ToString());
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+                else
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add(item.Team1.TeamName.ToString());
+                    lvi.SubItems.Add(item.Team2.TeamName.ToString());
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+
             }
         }
+
+
     }
 }

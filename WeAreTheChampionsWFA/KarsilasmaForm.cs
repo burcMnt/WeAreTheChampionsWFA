@@ -64,14 +64,14 @@ namespace WeAreTheChampionsWFA
         {
             var takim1 = (Team)cboTakim1.SelectedItem;
             var takim2 = (Team)cboTakim2.SelectedItem;
-            if (takim1.Id==takim2.Id)
+            if (takim1 == null || takim2 == null)
             {
-                MessageBox.Show("Karşılaşmalar iki farklı takım arasında olmalıdır,Lütfen iki farklı takim seçiniz.");
+                MessageBox.Show("Lütfen karşılaşma oluşturmak için takımları seçiniz.");
                 return;
             }
-            else if (takim1 == null || takim2 == null)
+            else if (takim1.Id == takim2.Id)
             {
-                MessageBox.Show("Lütfen karşılaşma oluşturmak için takımları seçiniz. ");
+                MessageBox.Show("Karşılaşmalar iki farklı takım arasında olmalıdır,Lütfen iki farklı takim seçiniz. ");
                 return;
             }
 

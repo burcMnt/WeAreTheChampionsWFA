@@ -13,13 +13,16 @@ namespace WeAreTheChampionsWFA.Models
     {
         public int Id { get; set; }
         public DateTime MatchTime { get; set; }
-        [Required]
-        public int Team1Id { get; set; }
-        [Required]
-        public int Team2Id { get; set; }
+
+        [ForeignKey("Team1")]
+        public int? Team1Id { get; set; }
+
+        [ForeignKey("Team2")]
+        public int? Team2Id { get; set; }
         public int? Score1 { get; set; }
         public int? Score2 { get; set; }
         public MatchResult Result { get; set; }
-        public virtual ICollection<Team> Teams { get; set; }
+        public virtual Team Team1 { get; set; }
+        public virtual Team Team2 { get; set; }
     }
 }
