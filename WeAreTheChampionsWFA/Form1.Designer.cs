@@ -94,6 +94,13 @@ namespace WeAreTheChampionsWFA
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnTakimDuzenle = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -273,7 +280,14 @@ namespace WeAreTheChampionsWFA
             // 
             // lviKarsilasma
             // 
-            this.lviKarsilasma.BackgroundImageTiled = true;
+            this.lviKarsilasma.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lviKarsilasma.ForeColor = System.Drawing.Color.LightSlateGray;
             this.lviKarsilasma.HideSelection = false;
             this.lviKarsilasma.Location = new System.Drawing.Point(24, 257);
             this.lviKarsilasma.Margin = new System.Windows.Forms.Padding(2);
@@ -281,6 +295,7 @@ namespace WeAreTheChampionsWFA
             this.lviKarsilasma.Size = new System.Drawing.Size(963, 239);
             this.lviKarsilasma.TabIndex = 0;
             this.lviKarsilasma.UseCompatibleStateImageBehavior = false;
+            this.lviKarsilasma.View = System.Windows.Forms.View.Details;
             // 
             // tabPage2
             // 
@@ -512,6 +527,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.groupBox2.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d244;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox2.Controls.Add(this.btnTakimDuzenle);
             this.groupBox2.Controls.Add(this.btnTakimSil);
             this.groupBox2.Controls.Add(this.btnTakimEkle);
             this.groupBox2.Controls.Add(this.lstTakimAdlari);
@@ -909,6 +925,48 @@ namespace WeAreTheChampionsWFA
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "TARİH";
+            this.columnHeader1.Width = 140;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "SAAT";
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "TAKIM 1";
+            this.columnHeader3.Width = 137;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "TAKIM 2";
+            this.columnHeader4.Width = 142;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "SKOR";
+            this.columnHeader5.Width = 94;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "MAÇ SONUCU";
+            this.columnHeader6.Width = 171;
+            // 
+            // btnTakimDuzenle
+            // 
+            this.btnTakimDuzenle.AccessibleName = "";
+            this.btnTakimDuzenle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTakimDuzenle.Location = new System.Drawing.Point(82, 427);
+            this.btnTakimDuzenle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTakimDuzenle.Name = "btnTakimDuzenle";
+            this.btnTakimDuzenle.Size = new System.Drawing.Size(134, 29);
+            this.btnTakimDuzenle.TabIndex = 5;
+            this.btnTakimDuzenle.Text = "Takım Düzenle";
+            this.btnTakimDuzenle.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1008,6 +1066,13 @@ namespace WeAreTheChampionsWFA
         private System.Windows.Forms.Button btnRenkIptal;
         private System.Windows.Forms.Button btnOyuncuIptal;
         private System.Windows.Forms.CheckBox chbMuzik;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button btnTakimDuzenle;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 

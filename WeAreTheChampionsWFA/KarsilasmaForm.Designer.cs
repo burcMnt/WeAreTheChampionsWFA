@@ -118,6 +118,7 @@ namespace WeAreTheChampionsWFA
             // 
             // dtpMacTime
             // 
+            this.dtpMacTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpMacTime.Location = new System.Drawing.Point(131, 61);
             this.dtpMacTime.Name = "dtpMacTime";
             this.dtpMacTime.Size = new System.Drawing.Size(200, 22);
@@ -151,6 +152,7 @@ namespace WeAreTheChampionsWFA
             this.btnEkle.TabIndex = 11;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnIptal
             // 

@@ -17,8 +17,8 @@ namespace WeAreTheChampionsWFA.Models
         public int Team1Id { get; set; }
         [Required]
         public int Team2Id { get; set; }
-        public int Score1 { get; set; }
-        public int Score2 { get; set; }
+        public int? Score1 { get; set; }
+        public int? Score2 { get; set; }
         public MatchResult Result { get; set; }
         public virtual ICollection<Team> Teams { get; set; }
     }

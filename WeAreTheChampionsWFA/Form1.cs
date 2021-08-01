@@ -20,6 +20,7 @@ namespace WeAreTheChampionsWFA
         {
             InitializeComponent();
             muzik.URL = "uefa.mp3";
+            MaclariYukle();
             TakimlariListele();
             TakimlarTabResetle();
             RenkleriListele();
@@ -398,8 +399,36 @@ namespace WeAreTheChampionsWFA
 
         private void pboKarsilasmaEkle_Click(object sender, EventArgs e)
         {
+            KarsilasmaFormAc();
+        }
+
+        private void KarsilasmaFormAc()
+        {
             var karsilasmaForm = new KarsilasmaForm(db);
+            karsilasmaForm.MacEklendi += KarsilasmaForm_MacEklendi;
             karsilasmaForm.ShowDialog();
+        }
+
+        private void KarsilasmaForm_MacEklendi(object sender, EventArgs e)
+        {
+            MaclariYukle();
+        }
+
+        private void MaclariYukle()
+        {
+            var takim = new Match();
+            lviKarsilasma.Items.Clear();
+            foreach (Match item in db.Matches)
+            {
+                ListViewItem lvi = new ListViewItem(item.MatchTime.ToShortDateString());
+                lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                lvi.SubItems.Add(item.Team1Id.ToString());
+                lvi.SubItems.Add(item.Team2Id.ToString());
+                lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                lvi.SubItems.Add(item.Result.ToString());
+                lvi.Tag = item;
+                lviKarsilasma.Items.Add(lvi);
+            }
         }
     }
 }
