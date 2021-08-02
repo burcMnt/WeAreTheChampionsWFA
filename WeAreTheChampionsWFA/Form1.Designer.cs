@@ -68,6 +68,7 @@ namespace WeAreTheChampionsWFA
             this.cboTakimAd = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTakimIptal = new System.Windows.Forms.Button();
             this.btnTakimDuzenle = new System.Windows.Forms.Button();
             this.btnTakimSil = new System.Windows.Forms.Button();
             this.btnTakimEkle = new System.Windows.Forms.Button();
@@ -101,7 +102,6 @@ namespace WeAreTheChampionsWFA
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnTakimIptal = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -187,22 +187,24 @@ namespace WeAreTheChampionsWFA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(470, 526);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 25);
+            this.label3.Size = new System.Drawing.Size(166, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Karşılaşmayı Sil";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(66, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 25);
+            this.label2.Size = new System.Drawing.Size(220, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Karşılaşmayı Düzenle";
             // 
@@ -217,6 +219,7 @@ namespace WeAreTheChampionsWFA
             this.pboKarsilasmaSil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboKarsilasmaSil.TabIndex = 4;
             this.pboKarsilasmaSil.TabStop = false;
+            this.pboKarsilasmaSil.Click += new System.EventHandler(this.pboKarsilasmaSil_Click);
             // 
             // pboKarsilasmaDuzenle
             // 
@@ -229,15 +232,17 @@ namespace WeAreTheChampionsWFA
             this.pboKarsilasmaDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboKarsilasmaDuzenle.TabIndex = 3;
             this.pboKarsilasmaDuzenle.TabStop = false;
+            this.pboKarsilasmaDuzenle.Click += new System.EventHandler(this.pboKarsilasmaDuzenle_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(744, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 25);
+            this.label1.Size = new System.Drawing.Size(216, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Yeni Karşılaşma Ekle";
             // 
@@ -256,6 +261,7 @@ namespace WeAreTheChampionsWFA
             // 
             // lviKarsilasma
             // 
+            this.lviKarsilasma.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.lviKarsilasma.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -263,7 +269,8 @@ namespace WeAreTheChampionsWFA
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.lviKarsilasma.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.lviKarsilasma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lviKarsilasma.ForeColor = System.Drawing.Color.LavenderBlush;
             this.lviKarsilasma.HideSelection = false;
             this.lviKarsilasma.Location = new System.Drawing.Point(103, 258);
             this.lviKarsilasma.Margin = new System.Windows.Forms.Padding(2);
@@ -272,6 +279,7 @@ namespace WeAreTheChampionsWFA
             this.lviKarsilasma.TabIndex = 0;
             this.lviKarsilasma.UseCompatibleStateImageBehavior = false;
             this.lviKarsilasma.View = System.Windows.Forms.View.Details;
+            this.lviKarsilasma.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lviKarsilasma_MouseDoubleClick);
             // 
             // columnHeader1
             // 
@@ -550,6 +558,20 @@ namespace WeAreTheChampionsWFA
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TakımOluştur";
+            // 
+            // btnTakimIptal
+            // 
+            this.btnTakimIptal.AccessibleName = "";
+            this.btnTakimIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTakimIptal.Location = new System.Drawing.Point(82, 460);
+            this.btnTakimIptal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTakimIptal.Name = "btnTakimIptal";
+            this.btnTakimIptal.Size = new System.Drawing.Size(134, 29);
+            this.btnTakimIptal.TabIndex = 6;
+            this.btnTakimIptal.Text = "IPTAL";
+            this.btnTakimIptal.UseVisualStyleBackColor = false;
+            this.btnTakimIptal.Visible = false;
+            this.btnTakimIptal.Click += new System.EventHandler(this.btnTakimIptal_Click);
             // 
             // btnTakimDuzenle
             // 
@@ -888,7 +910,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnOyuncuIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuIptal.ForeColor = System.Drawing.Color.White;
-            this.btnOyuncuIptal.Location = new System.Drawing.Point(380, 504);
+            this.btnOyuncuIptal.Location = new System.Drawing.Point(486, 525);
             this.btnOyuncuIptal.Margin = new System.Windows.Forms.Padding(2);
             this.btnOyuncuIptal.Name = "btnOyuncuIptal";
             this.btnOyuncuIptal.Size = new System.Drawing.Size(120, 30);
@@ -902,7 +924,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnOyuncuDuzenle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuDuzenle.ForeColor = System.Drawing.Color.White;
-            this.btnOyuncuDuzenle.Location = new System.Drawing.Point(789, 504);
+            this.btnOyuncuDuzenle.Location = new System.Drawing.Point(837, 525);
             this.btnOyuncuDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.btnOyuncuDuzenle.Name = "btnOyuncuDuzenle";
             this.btnOyuncuDuzenle.Size = new System.Drawing.Size(120, 30);
@@ -915,7 +937,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnOyuncuSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuSil.ForeColor = System.Drawing.Color.White;
-            this.btnOyuncuSil.Location = new System.Drawing.Point(690, 504);
+            this.btnOyuncuSil.Location = new System.Drawing.Point(738, 525);
             this.btnOyuncuSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnOyuncuSil.Name = "btnOyuncuSil";
             this.btnOyuncuSil.Size = new System.Drawing.Size(82, 31);
@@ -928,7 +950,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnOyuncuEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuEkle.ForeColor = System.Drawing.Color.White;
-            this.btnOyuncuEkle.Location = new System.Drawing.Point(562, 504);
+            this.btnOyuncuEkle.Location = new System.Drawing.Point(610, 525);
             this.btnOyuncuEkle.Margin = new System.Windows.Forms.Padding(2);
             this.btnOyuncuEkle.Name = "btnOyuncuEkle";
             this.btnOyuncuEkle.Size = new System.Drawing.Size(122, 31);
@@ -944,7 +966,7 @@ namespace WeAreTheChampionsWFA
             this.lstOyuncular.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lstOyuncular.FormattingEnabled = true;
             this.lstOyuncular.ItemHeight = 25;
-            this.lstOyuncular.Location = new System.Drawing.Point(562, 104);
+            this.lstOyuncular.Location = new System.Drawing.Point(610, 108);
             this.lstOyuncular.Margin = new System.Windows.Forms.Padding(2);
             this.lstOyuncular.Name = "lstOyuncular";
             this.lstOyuncular.Size = new System.Drawing.Size(347, 379);
@@ -953,7 +975,7 @@ namespace WeAreTheChampionsWFA
             // txtOyuncuAd
             // 
             this.txtOyuncuAd.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtOyuncuAd.Location = new System.Drawing.Point(562, 70);
+            this.txtOyuncuAd.Location = new System.Drawing.Point(610, 74);
             this.txtOyuncuAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtOyuncuAd.Name = "txtOyuncuAd";
             this.txtOyuncuAd.Size = new System.Drawing.Size(347, 30);
@@ -963,26 +985,12 @@ namespace WeAreTheChampionsWFA
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label9.Location = new System.Drawing.Point(624, 34);
+            this.label9.Location = new System.Drawing.Point(672, 38);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(148, 25);
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
-            // 
-            // btnTakimIptal
-            // 
-            this.btnTakimIptal.AccessibleName = "";
-            this.btnTakimIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTakimIptal.Location = new System.Drawing.Point(82, 460);
-            this.btnTakimIptal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTakimIptal.Name = "btnTakimIptal";
-            this.btnTakimIptal.Size = new System.Drawing.Size(134, 29);
-            this.btnTakimIptal.TabIndex = 6;
-            this.btnTakimIptal.Text = "IPTAL";
-            this.btnTakimIptal.UseVisualStyleBackColor = false;
-            this.btnTakimIptal.Visible = false;
-            this.btnTakimIptal.Click += new System.EventHandler(this.btnTakimIptal_Click);
             // 
             // Form1
             // 

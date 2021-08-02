@@ -15,11 +15,38 @@ namespace WeAreTheChampionsWFA
     {
         public event EventHandler MacEklendi;
         private readonly ProjectContext db;
+        private Match matches;
+        public KarsilasmaForm()
+        {
+
+        }
         public KarsilasmaForm(ProjectContext db)
         {
             this.db = db;
             InitializeComponent();
             TakimlariListele();
+        }
+        public KarsilasmaForm(Match matches, ProjectContext db)
+        {
+            this.matches = matches;
+            this.db = db;
+            InitializeComponent();
+            DuzenleArayuzOlustur();
+        }
+
+        private void DuzenleArayuzOlustur()
+        {
+            cboTakim1.DisplayMember = "TeamName";
+            cboTakim2.DisplayMember = "TeamName";
+            cboTakim1.DataSource = db.Teams.ToList();
+            cboTakim2.DataSource = db.Teams.ToList();
+            dtpMacTime.Value = matches.MatchTime;
+            cboTakim1.Text = matches.Team1.TeamName.ToString();
+            cboTakim2.Text = matches.Team2.TeamName.ToString();
+            mtbSkor1.Text = matches.Score1.ToString();
+            mtbSkor2.Text = matches.Score2.ToString();
+            btnIptal.Visible = true;
+            btnEkle.Text = "KAYDET";
         }
 
         private void FormuResetle()
@@ -27,6 +54,8 @@ namespace WeAreTheChampionsWFA
             cboTakim1.SelectedIndex = cboTakim2.SelectedIndex = -1;
             mtbSkor1.Clear();
             mtbSkor2.Clear();
+            btnIptal.Visible = false;
+            btnEkle.Text = "EKLE";
         }
 
         private void TakimlariListele()
@@ -62,31 +91,54 @@ namespace WeAreTheChampionsWFA
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            var takim1 = (Team)cboTakim1.SelectedItem;
-            var takim2 = (Team)cboTakim2.SelectedItem;
-            if (takim1 == null || takim2 == null)
+                var takim1 = (Team)cboTakim1.SelectedItem;
+                var takim2 = (Team)cboTakim2.SelectedItem;
+            if (matches==null)
             {
-                MessageBox.Show("Lütfen karşılaşma oluşturmak için takımları seçiniz.");
-                return;
-            }
-            else if (takim1.Id == takim2.Id)
-            {
-                MessageBox.Show("Karşılaşmalar iki farklı takım arasında olmalıdır,Lütfen iki farklı takim seçiniz. ");
-                return;
-            }
+                if (takim1 == null || takim2 == null)
+                {
+                    MessageBox.Show("Lütfen karşılaşma oluşturmak için takımları seçiniz.");
+                    return;
+                }
+                else if (takim1.Id == takim2.Id)
+                {
+                    MessageBox.Show("Karşılaşmalar iki farklı takım arasında olmalıdır,Lütfen iki farklı takim seçiniz. ");
+                    return;
+                }
 
-            db.Matches.Add(new Match()
+                db.Matches.Add(new Match()
+                {
+                    MatchTime = dtpMacTime.Value,
+                    Team1Id = takim1.Id,
+                    Team2Id = takim2.Id,
+                    Score1 = mtbSkor1.Text == "" ? null as int? : Convert.ToInt32(mtbSkor1.Text),
+                    Score2 = mtbSkor2.Text == "" ? null as int? : Convert.ToInt32(mtbSkor2.Text),
+                    Result = Sonuc()
+                });
+                FormuResetle();
+            }
+            else
             {
-                MatchTime = dtpMacTime.Value,
-                Team1Id = takim1.Id,
-                Team2Id = takim2.Id,
-                Score1 = mtbSkor1.Text == "" ? null as int? : Convert.ToInt32(mtbSkor1.Text),
-                Score2 = mtbSkor2.Text == "" ? null as int? : Convert.ToInt32(mtbSkor2.Text),
-                Result = Sonuc()
-            });
+                if (takim1 == null || takim2 == null)
+                {
+                    MessageBox.Show("Lütfen karşılaşma oluşturmak için takımları seçiniz.");
+                    return;
+                }
+                else if (takim1.Id == takim2.Id)
+                {
+                    MessageBox.Show("Karşılaşmalar iki farklı takım arasında olmalıdır,Lütfen iki farklı takim seçiniz. ");
+                    return;
+                }
+
+                matches.MatchTime = dtpMacTime.Value;
+                matches.Team1Id = takim1.Id;
+                matches.Team2Id = takim2.Id;
+                matches.Score1 = mtbSkor1.Text == "" ? null as int? : Convert.ToInt32(mtbSkor1.Text);
+                matches.Score2 = mtbSkor2.Text == "" ? null as int? : Convert.ToInt32(mtbSkor2.Text);
+                matches.Result = Sonuc();
+            }
             db.SaveChanges();
             MacEklendiginde(EventArgs.Empty);
-            FormuResetle();
             Close();
         }
 
@@ -96,6 +148,12 @@ namespace WeAreTheChampionsWFA
             {
                 MacEklendi(this, args);
             }
+        }
+
+        private void btnIptal_Click(object sender, EventArgs e)
+        {
+            FormuResetle();
+            Close();
         }
     }
 }

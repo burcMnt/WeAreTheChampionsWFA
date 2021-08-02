@@ -496,6 +496,62 @@ namespace WeAreTheChampionsWFA
             }
         }
 
+        private void pboKarsilasmaSil_Click(object sender, EventArgs e)
+        {
 
+            if (lviKarsilasma.SelectedItems.Count == 1)
+            {
+                DialogResult dr = MessageBox.Show(
+                    "Seçili karşılaşmayı silmek istediğinize emin misiniz?",
+                    "Silme Onayı",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button2);
+
+                if (dr == DialogResult.Yes)
+                {
+                    Match maclar = (Match)lviKarsilasma.SelectedItems[0].Tag;
+                    db.Matches.Remove(maclar);
+                    db.SaveChanges();
+                    MaclariYukle();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek istediğiniz karşılaşmayı seçiniz.");
+                return;
+            }
+        }
+        Match duzenlenenMac;
+        private void pboKarsilasmaDuzenle_Click(object sender, EventArgs e)
+        {
+            MaclariDuzenle();
+        }
+
+        private void lviKarsilasma_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            MaclariDuzenle();
+        }
+        private void MaclariDuzenle()
+        {
+            if (lviKarsilasma.SelectedItems.Count == 1)
+            {
+                duzenlenenMac = (Match)lviKarsilasma.SelectedItems[0].Tag;
+                var KarsilasmaForm2 = new KarsilasmaForm(duzenlenenMac, db);
+                KarsilasmaForm2.MacEklendi += KarsilasmaForm2_MacEklendi;
+                KarsilasmaForm2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen düzenlenicek olan karşılaşmayı seçiniz.");
+                return;
+            }
+        }
+
+        private void KarsilasmaForm2_MacEklendi(object sender, EventArgs e)
+        {
+            MaclariYukle();
+        }
     }
 }
