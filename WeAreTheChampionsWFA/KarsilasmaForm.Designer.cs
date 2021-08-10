@@ -56,6 +56,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(577, 156);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -76,6 +77,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(516, 253);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -86,6 +88,8 @@ namespace WeAreTheChampionsWFA
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(346, 61);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -107,6 +111,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboTakim2
             // 
+            this.cboTakim2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTakim2.BackColor = System.Drawing.Color.White;
             this.cboTakim2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTakim2.FormattingEnabled = true;
@@ -118,6 +123,8 @@ namespace WeAreTheChampionsWFA
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(381, 169);
@@ -129,6 +136,8 @@ namespace WeAreTheChampionsWFA
             // 
             // dtpMacTime
             // 
+            this.dtpMacTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpMacTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpMacTime.Location = new System.Drawing.Point(264, 91);
             this.dtpMacTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -149,6 +158,7 @@ namespace WeAreTheChampionsWFA
             // 
             // mtbSkor2
             // 
+            this.mtbSkor2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.mtbSkor2.HidePromptOnLeave = true;
             this.mtbSkor2.Location = new System.Drawing.Point(663, 248);
             this.mtbSkor2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -160,6 +170,8 @@ namespace WeAreTheChampionsWFA
             // 
             // btnEkle
             // 
+            this.btnEkle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEkle.BackColor = System.Drawing.Color.White;
             this.btnEkle.Location = new System.Drawing.Point(327, 391);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -172,6 +184,8 @@ namespace WeAreTheChampionsWFA
             // 
             // btnIptal
             // 
+            this.btnIptal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIptal.BackColor = System.Drawing.Color.White;
             this.btnIptal.Location = new System.Drawing.Point(351, 437);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

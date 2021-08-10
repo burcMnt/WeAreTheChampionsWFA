@@ -102,6 +102,7 @@ namespace WeAreTheChampionsWFA
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.chbFiltre = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -150,8 +151,12 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._3ab72746e777400983ad8371a2e6a4e6;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.chbFiltre);
             this.groupBox1.Controls.Add(this.chbMuzik);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -186,6 +191,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -210,9 +216,11 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaSil
             // 
+            this.pboKarsilasmaSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pboKarsilasmaSil.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.football_player_close_up_with_delete_cross_symbol;
             this.pboKarsilasmaSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pboKarsilasmaSil.Location = new System.Drawing.Point(424, 511);
+            this.pboKarsilasmaSil.Location = new System.Drawing.Point(424, 519);
             this.pboKarsilasmaSil.Margin = new System.Windows.Forms.Padding(2);
             this.pboKarsilasmaSil.Name = "pboKarsilasmaSil";
             this.pboKarsilasmaSil.Size = new System.Drawing.Size(42, 50);
@@ -236,6 +244,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -248,6 +257,7 @@ namespace WeAreTheChampionsWFA
             // 
             // pboKarsilasmaEkle
             // 
+            this.pboKarsilasmaEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pboKarsilasmaEkle.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources.soccer_field;
             this.pboKarsilasmaEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pboKarsilasmaEkle.Location = new System.Drawing.Point(944, 95);
@@ -261,6 +271,9 @@ namespace WeAreTheChampionsWFA
             // 
             // lviKarsilasma
             // 
+            this.lviKarsilasma.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lviKarsilasma.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.lviKarsilasma.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -272,7 +285,7 @@ namespace WeAreTheChampionsWFA
             this.lviKarsilasma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lviKarsilasma.ForeColor = System.Drawing.Color.LavenderBlush;
             this.lviKarsilasma.HideSelection = false;
-            this.lviKarsilasma.Location = new System.Drawing.Point(103, 258);
+            this.lviKarsilasma.Location = new System.Drawing.Point(99, 276);
             this.lviKarsilasma.Margin = new System.Windows.Forms.Padding(2);
             this.lviKarsilasma.Name = "lviKarsilasma";
             this.lviKarsilasma.Size = new System.Drawing.Size(812, 239);
@@ -329,6 +342,8 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d244;
             this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox4.Controls.Add(this.btnTakimOyuncuSil);
@@ -351,6 +366,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnTakimOyuncuSil
             // 
+            this.btnTakimOyuncuSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimOyuncuSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTakimOyuncuSil.ForeColor = System.Drawing.Color.LightYellow;
             this.btnTakimOyuncuSil.Location = new System.Drawing.Point(178, 98);
@@ -392,6 +408,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboOyuncuAd
             // 
+            this.cboOyuncuAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboOyuncuAd.DisplayMember = "PlayerName";
             this.cboOyuncuAd.FormattingEnabled = true;
             this.cboOyuncuAd.Location = new System.Drawing.Point(132, 68);
@@ -413,6 +430,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboTakimAdO
             // 
+            this.cboTakimAdO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTakimAdO.DisplayMember = "TeamName";
             this.cboTakimAdO.FormattingEnabled = true;
             this.cboTakimAdO.Location = new System.Drawing.Point(132, 29);
@@ -435,6 +453,7 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox3.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d244;
             this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Controls.Add(this.btnTakimRenkSil);
@@ -457,6 +476,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnTakimRenkSil
             // 
+            this.btnTakimRenkSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimRenkSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTakimRenkSil.Location = new System.Drawing.Point(215, 98);
             this.btnTakimRenkSil.Margin = new System.Windows.Forms.Padding(2);
@@ -469,6 +489,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnTakimRenkAta
             // 
+            this.btnTakimRenkAta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimRenkAta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTakimRenkAta.Location = new System.Drawing.Point(121, 98);
             this.btnTakimRenkAta.Margin = new System.Windows.Forms.Padding(2);
@@ -496,6 +517,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboRenkAd
             // 
+            this.cboRenkAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboRenkAd.DisplayMember = "ColorName";
             this.cboRenkAd.FormattingEnabled = true;
             this.cboRenkAd.Location = new System.Drawing.Point(121, 64);
@@ -506,6 +528,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label6.Location = new System.Drawing.Point(2, 72);
@@ -517,6 +540,7 @@ namespace WeAreTheChampionsWFA
             // 
             // cboTakimAd
             // 
+            this.cboTakimAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTakimAd.DisplayMember = "TeamName";
             this.cboTakimAd.FormattingEnabled = true;
             this.cboTakimAd.Location = new System.Drawing.Point(121, 26);
@@ -528,6 +552,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.LightYellow;
             this.label5.Location = new System.Drawing.Point(6, 32);
@@ -539,6 +564,8 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._700_FO38203752_01f55836a9290b702c39bc2cc1a6d244;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.btnTakimIptal);
@@ -562,6 +589,8 @@ namespace WeAreTheChampionsWFA
             // btnTakimIptal
             // 
             this.btnTakimIptal.AccessibleName = "";
+            this.btnTakimIptal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTakimIptal.Location = new System.Drawing.Point(82, 460);
             this.btnTakimIptal.Margin = new System.Windows.Forms.Padding(2);
@@ -576,6 +605,8 @@ namespace WeAreTheChampionsWFA
             // btnTakimDuzenle
             // 
             this.btnTakimDuzenle.AccessibleName = "";
+            this.btnTakimDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimDuzenle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTakimDuzenle.Location = new System.Drawing.Point(82, 427);
             this.btnTakimDuzenle.Margin = new System.Windows.Forms.Padding(2);
@@ -588,6 +619,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnTakimSil
             // 
+            this.btnTakimSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTakimSil.Location = new System.Drawing.Point(149, 72);
             this.btnTakimSil.Margin = new System.Windows.Forms.Padding(2);
@@ -626,6 +658,7 @@ namespace WeAreTheChampionsWFA
             // 
             // txtTakimAd
             // 
+            this.txtTakimAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTakimAd.Location = new System.Drawing.Point(104, 32);
             this.txtTakimAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtTakimAd.Name = "txtTakimAd";
@@ -657,6 +690,9 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._190918_soccer_01;
             this.groupBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox6.Controls.Add(this.btnRenkIptal);
@@ -687,6 +723,8 @@ namespace WeAreTheChampionsWFA
             // 
             // btnRenkIptal
             // 
+            this.btnRenkIptal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRenkIptal.BackColor = System.Drawing.Color.LimeGreen;
             this.btnRenkIptal.ForeColor = System.Drawing.SystemColors.Info;
             this.btnRenkIptal.Location = new System.Drawing.Point(531, 150);
@@ -721,6 +759,8 @@ namespace WeAreTheChampionsWFA
             // 
             // btnRenkDuzenle
             // 
+            this.btnRenkDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRenkDuzenle.BackColor = System.Drawing.Color.LimeGreen;
             this.btnRenkDuzenle.ForeColor = System.Drawing.SystemColors.Info;
             this.btnRenkDuzenle.Location = new System.Drawing.Point(531, 111);
@@ -734,6 +774,8 @@ namespace WeAreTheChampionsWFA
             // 
             // btnRenkSil
             // 
+            this.btnRenkSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRenkSil.BackColor = System.Drawing.Color.LimeGreen;
             this.btnRenkSil.ForeColor = System.Drawing.SystemColors.Info;
             this.btnRenkSil.Location = new System.Drawing.Point(531, 73);
@@ -747,6 +789,8 @@ namespace WeAreTheChampionsWFA
             // 
             // btnRenkEkle
             // 
+            this.btnRenkEkle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRenkEkle.BackColor = System.Drawing.Color.LimeGreen;
             this.btnRenkEkle.ForeColor = System.Drawing.SystemColors.Info;
             this.btnRenkEkle.Location = new System.Drawing.Point(531, 35);
@@ -760,6 +804,7 @@ namespace WeAreTheChampionsWFA
             // 
             // lstRenkler
             // 
+            this.lstRenkler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstRenkler.BackColor = System.Drawing.Color.Black;
             this.lstRenkler.DisplayMember = "ColorName";
             this.lstRenkler.ForeColor = System.Drawing.Color.White;
@@ -887,6 +932,9 @@ namespace WeAreTheChampionsWFA
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.BackgroundImage = global::WeAreTheChampionsWFA.Properties.Resources._8127;
             this.groupBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox5.Controls.Add(this.btnOyuncuIptal);
@@ -908,6 +956,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnOyuncuIptal
             // 
+            this.btnOyuncuIptal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOyuncuIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuIptal.ForeColor = System.Drawing.Color.White;
             this.btnOyuncuIptal.Location = new System.Drawing.Point(486, 525);
@@ -922,6 +971,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnOyuncuDuzenle
             // 
+            this.btnOyuncuDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOyuncuDuzenle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuDuzenle.ForeColor = System.Drawing.Color.White;
             this.btnOyuncuDuzenle.Location = new System.Drawing.Point(837, 525);
@@ -935,6 +985,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnOyuncuSil
             // 
+            this.btnOyuncuSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOyuncuSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuSil.ForeColor = System.Drawing.Color.White;
             this.btnOyuncuSil.Location = new System.Drawing.Point(738, 525);
@@ -948,6 +999,7 @@ namespace WeAreTheChampionsWFA
             // 
             // btnOyuncuEkle
             // 
+            this.btnOyuncuEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOyuncuEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOyuncuEkle.ForeColor = System.Drawing.Color.White;
             this.btnOyuncuEkle.Location = new System.Drawing.Point(610, 525);
@@ -961,6 +1013,7 @@ namespace WeAreTheChampionsWFA
             // 
             // lstOyuncular
             // 
+            this.lstOyuncular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstOyuncular.BackColor = System.Drawing.Color.AliceBlue;
             this.lstOyuncular.DisplayMember = "PlayerName";
             this.lstOyuncular.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -974,6 +1027,7 @@ namespace WeAreTheChampionsWFA
             // 
             // txtOyuncuAd
             // 
+            this.txtOyuncuAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOyuncuAd.BackColor = System.Drawing.Color.AliceBlue;
             this.txtOyuncuAd.Location = new System.Drawing.Point(610, 74);
             this.txtOyuncuAd.Margin = new System.Windows.Forms.Padding(2);
@@ -983,6 +1037,7 @@ namespace WeAreTheChampionsWFA
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label9.Location = new System.Drawing.Point(672, 38);
@@ -992,6 +1047,18 @@ namespace WeAreTheChampionsWFA
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
             // 
+            // chbFiltre
+            // 
+            this.chbFiltre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbFiltre.AutoSize = true;
+            this.chbFiltre.Location = new System.Drawing.Point(728, 247);
+            this.chbFiltre.Name = "chbFiltre";
+            this.chbFiltre.Size = new System.Drawing.Size(203, 29);
+            this.chbFiltre.TabIndex = 8;
+            this.chbFiltre.Text = "Sonuçlanan Maçlar";
+            this.chbFiltre.UseVisualStyleBackColor = true;
+            this.chbFiltre.CheckedChanged += new System.EventHandler(this.chbFiltre_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1000,6 +1067,7 @@ namespace WeAreTheChampionsWFA
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "We Are The Champions 1.0";
             this.tabControl1.ResumeLayout(false);
@@ -1099,6 +1167,7 @@ namespace WeAreTheChampionsWFA
         private System.Windows.Forms.Button btnTakimDuzenle;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button btnTakimIptal;
+        private System.Windows.Forms.CheckBox chbFiltre;
     }
 }
 

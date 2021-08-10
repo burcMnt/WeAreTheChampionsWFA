@@ -553,5 +553,67 @@ namespace WeAreTheChampionsWFA
         {
             MaclariYukle();
         }
+
+        private void chbFiltre_CheckedChanged(object sender, EventArgs e)
+        {
+            lviKarsilasma.Items.Clear();
+            if (!chbFiltre.Checked)
+            {
+                MaclariYukle();
+            }
+            else
+            {
+                FiltreliMaclar();
+            }
+        }
+
+        private void FiltreliMaclar()
+        {
+            foreach (Match item in db.Matches.Where(x => x.Result != MatchResult.Belli_Degil).ToList())
+            {
+                ListViewItem lvi = new ListViewItem(item.MatchTime.ToShortDateString());
+                if (item.Team1Id == null && item.Team2Id == null)
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+                else if (item.Team1Id == null)
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add(item.Team2.TeamName.ToString());
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+                else if (item.Team2Id == null)
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add(item.Team1.TeamName.ToString());
+                    lvi.SubItems.Add("?????");
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+                else
+                {
+                    lvi.SubItems.Add(item.MatchTime.ToShortTimeString());
+                    lvi.SubItems.Add(item.Team1.TeamName.ToString());
+                    lvi.SubItems.Add(item.Team2.TeamName.ToString());
+                    lvi.SubItems.Add(item.Score1.ToString() + " - " + item.Score2.ToString());
+                    lvi.SubItems.Add(item.Result.ToString());
+                    lvi.Tag = item;
+                    lviKarsilasma.Items.Add(lvi);
+                }
+
+            }
+        }
     }
 }
