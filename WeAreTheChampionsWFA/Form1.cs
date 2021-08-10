@@ -449,7 +449,7 @@ namespace WeAreTheChampionsWFA
         {
 
             lviKarsilasma.Items.Clear();
-            foreach (Match item in db.Matches.ToList())
+            foreach (Match item in db.Matches.OrderByDescending(x => x.MatchTime).ToList())
             {
                 ListViewItem lvi = new ListViewItem(item.MatchTime.ToShortDateString());
                 if (item.Team1Id == null && item.Team2Id == null)
@@ -569,7 +569,7 @@ namespace WeAreTheChampionsWFA
 
         private void FiltreliMaclar()
         {
-            foreach (Match item in db.Matches.Where(x => x.Result != MatchResult.Belli_Degil).ToList())
+            foreach (Match item in db.Matches.Where(x => x.Result != MatchResult.Belli_Degil).OrderByDescending(x => x.MatchTime).ToList())
             {
                 ListViewItem lvi = new ListViewItem(item.MatchTime.ToShortDateString());
                 if (item.Team1Id == null && item.Team2Id == null)
