@@ -118,8 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="soccer-field" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soccer-field.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soccer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soccer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="190918_soccer_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\190918_soccer_01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thumb-1920-924289" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thumb-1920-924289.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="football-player-close-up-with-delete-cross-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\football-player-close-up-with-delete-cross-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colour" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\colour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,34 +148,16 @@
   <data name="3ab72746e777400983ad8371a2e6a4e6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3ab72746e777400983ad8371a2e6a4e6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soccer-field" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soccer-field.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="700_FO38203752_01f55836a9290b702c39bc2cc1a6d244" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\700_FO38203752_01f55836a9290b702c39bc2cc1a6d244.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soccer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soccer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="saha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="8127" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="colour" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="190918_soccer_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\190918_soccer_01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thumb-1920-924289" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thumb-1920-924289.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

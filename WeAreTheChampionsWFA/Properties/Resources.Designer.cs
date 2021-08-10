@@ -103,6 +103,16 @@ namespace WeAreTheChampionsWFA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cim {
+            get {
+                object obj = ResourceManager.GetObject("cim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap colour {
             get {
                 object obj = ResourceManager.GetObject("colour", resourceCulture);

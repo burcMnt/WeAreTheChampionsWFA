@@ -36,6 +36,7 @@ namespace WeAreTheChampionsWFA
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chbFiltre = new System.Windows.Forms.CheckBox();
             this.chbMuzik = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -102,7 +103,6 @@ namespace WeAreTheChampionsWFA
             this.lstOyuncular = new System.Windows.Forms.ListBox();
             this.txtOyuncuAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.chbFiltre = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -174,6 +174,18 @@ namespace WeAreTheChampionsWFA
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Karşılaşma";
+            // 
+            // chbFiltre
+            // 
+            this.chbFiltre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbFiltre.AutoSize = true;
+            this.chbFiltre.Location = new System.Drawing.Point(728, 247);
+            this.chbFiltre.Name = "chbFiltre";
+            this.chbFiltre.Size = new System.Drawing.Size(203, 29);
+            this.chbFiltre.TabIndex = 8;
+            this.chbFiltre.Text = "Sonuçlanan Maçlar";
+            this.chbFiltre.UseVisualStyleBackColor = true;
+            this.chbFiltre.CheckedChanged += new System.EventHandler(this.chbFiltre_CheckedChanged);
             // 
             // chbMuzik
             // 
@@ -355,7 +367,7 @@ namespace WeAreTheChampionsWFA
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox4.ForeColor = System.Drawing.Color.LightYellow;
-            this.groupBox4.Location = new System.Drawing.Point(634, 29);
+            this.groupBox4.Location = new System.Drawing.Point(654, 29);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
@@ -465,11 +477,11 @@ namespace WeAreTheChampionsWFA
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.ForeColor = System.Drawing.Color.LightYellow;
-            this.groupBox3.Location = new System.Drawing.Point(308, 29);
+            this.groupBox3.Location = new System.Drawing.Point(328, 29);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(311, 529);
+            this.groupBox3.Size = new System.Drawing.Size(322, 529);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Takıma Renk Ata";
@@ -478,7 +490,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnTakimRenkSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimRenkSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTakimRenkSil.Location = new System.Drawing.Point(215, 98);
+            this.btnTakimRenkSil.Location = new System.Drawing.Point(226, 98);
             this.btnTakimRenkSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnTakimRenkSil.Name = "btnTakimRenkSil";
             this.btnTakimRenkSil.Size = new System.Drawing.Size(90, 28);
@@ -491,7 +503,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnTakimRenkAta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimRenkAta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTakimRenkAta.Location = new System.Drawing.Point(121, 98);
+            this.btnTakimRenkAta.Location = new System.Drawing.Point(132, 98);
             this.btnTakimRenkAta.Margin = new System.Windows.Forms.Padding(2);
             this.btnTakimRenkAta.Name = "btnTakimRenkAta";
             this.btnTakimRenkAta.Size = new System.Drawing.Size(88, 28);
@@ -511,7 +523,7 @@ namespace WeAreTheChampionsWFA
             this.lstTakiminRengi.Location = new System.Drawing.Point(61, 136);
             this.lstTakiminRengi.Margin = new System.Windows.Forms.Padding(2);
             this.lstTakiminRengi.Name = "lstTakiminRengi";
-            this.lstTakiminRengi.Size = new System.Drawing.Size(189, 264);
+            this.lstTakiminRengi.Size = new System.Drawing.Size(200, 264);
             this.lstTakiminRengi.TabIndex = 4;
             this.lstTakiminRengi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTakimAdlari_KeyDown);
             // 
@@ -520,7 +532,7 @@ namespace WeAreTheChampionsWFA
             this.cboRenkAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboRenkAd.DisplayMember = "ColorName";
             this.cboRenkAd.FormattingEnabled = true;
-            this.cboRenkAd.Location = new System.Drawing.Point(121, 64);
+            this.cboRenkAd.Location = new System.Drawing.Point(132, 64);
             this.cboRenkAd.Margin = new System.Windows.Forms.Padding(2);
             this.cboRenkAd.Name = "cboRenkAd";
             this.cboRenkAd.Size = new System.Drawing.Size(184, 28);
@@ -531,7 +543,7 @@ namespace WeAreTheChampionsWFA
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(2, 72);
+            this.label6.Location = new System.Drawing.Point(13, 72);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 20);
@@ -543,7 +555,7 @@ namespace WeAreTheChampionsWFA
             this.cboTakimAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTakimAd.DisplayMember = "TeamName";
             this.cboTakimAd.FormattingEnabled = true;
-            this.cboTakimAd.Location = new System.Drawing.Point(121, 26);
+            this.cboTakimAd.Location = new System.Drawing.Point(132, 26);
             this.cboTakimAd.Margin = new System.Windows.Forms.Padding(2);
             this.cboTakimAd.Name = "cboTakimAd";
             this.cboTakimAd.Size = new System.Drawing.Size(184, 28);
@@ -555,7 +567,7 @@ namespace WeAreTheChampionsWFA
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.LightYellow;
-            this.label5.Location = new System.Drawing.Point(6, 32);
+            this.label5.Location = new System.Drawing.Point(17, 32);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 20);
@@ -581,7 +593,7 @@ namespace WeAreTheChampionsWFA
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(296, 526);
+            this.groupBox2.Size = new System.Drawing.Size(318, 526);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TakımOluştur";
@@ -595,7 +607,7 @@ namespace WeAreTheChampionsWFA
             this.btnTakimIptal.Location = new System.Drawing.Point(82, 460);
             this.btnTakimIptal.Margin = new System.Windows.Forms.Padding(2);
             this.btnTakimIptal.Name = "btnTakimIptal";
-            this.btnTakimIptal.Size = new System.Drawing.Size(134, 29);
+            this.btnTakimIptal.Size = new System.Drawing.Size(156, 29);
             this.btnTakimIptal.TabIndex = 6;
             this.btnTakimIptal.Text = "IPTAL";
             this.btnTakimIptal.UseVisualStyleBackColor = false;
@@ -611,7 +623,7 @@ namespace WeAreTheChampionsWFA
             this.btnTakimDuzenle.Location = new System.Drawing.Point(82, 427);
             this.btnTakimDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.btnTakimDuzenle.Name = "btnTakimDuzenle";
-            this.btnTakimDuzenle.Size = new System.Drawing.Size(134, 29);
+            this.btnTakimDuzenle.Size = new System.Drawing.Size(156, 29);
             this.btnTakimDuzenle.TabIndex = 5;
             this.btnTakimDuzenle.Text = "Takım Düzenle";
             this.btnTakimDuzenle.UseVisualStyleBackColor = false;
@@ -621,7 +633,7 @@ namespace WeAreTheChampionsWFA
             // 
             this.btnTakimSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTakimSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTakimSil.Location = new System.Drawing.Point(149, 72);
+            this.btnTakimSil.Location = new System.Drawing.Point(171, 72);
             this.btnTakimSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnTakimSil.Name = "btnTakimSil";
             this.btnTakimSil.Size = new System.Drawing.Size(126, 29);
@@ -652,14 +664,14 @@ namespace WeAreTheChampionsWFA
             this.lstTakimAdlari.Location = new System.Drawing.Point(42, 136);
             this.lstTakimAdlari.Margin = new System.Windows.Forms.Padding(2);
             this.lstTakimAdlari.Name = "lstTakimAdlari";
-            this.lstTakimAdlari.Size = new System.Drawing.Size(189, 264);
+            this.lstTakimAdlari.Size = new System.Drawing.Size(211, 264);
             this.lstTakimAdlari.TabIndex = 2;
             this.lstTakimAdlari.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTakimAdlari_KeyDown);
             // 
             // txtTakimAd
             // 
             this.txtTakimAd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTakimAd.Location = new System.Drawing.Point(104, 32);
+            this.txtTakimAd.Location = new System.Drawing.Point(126, 32);
             this.txtTakimAd.Margin = new System.Windows.Forms.Padding(2);
             this.txtTakimAd.Name = "txtTakimAd";
             this.txtTakimAd.Size = new System.Drawing.Size(170, 26);
@@ -716,7 +728,7 @@ namespace WeAreTheChampionsWFA
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(973, 555);
+            this.groupBox6.Size = new System.Drawing.Size(995, 569);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Renk Atama";
@@ -730,7 +742,7 @@ namespace WeAreTheChampionsWFA
             this.btnRenkIptal.Location = new System.Drawing.Point(531, 150);
             this.btnRenkIptal.Margin = new System.Windows.Forms.Padding(2);
             this.btnRenkIptal.Name = "btnRenkIptal";
-            this.btnRenkIptal.Size = new System.Drawing.Size(144, 35);
+            this.btnRenkIptal.Size = new System.Drawing.Size(166, 35);
             this.btnRenkIptal.TabIndex = 17;
             this.btnRenkIptal.Text = "İPTAL";
             this.btnRenkIptal.UseVisualStyleBackColor = false;
@@ -766,7 +778,7 @@ namespace WeAreTheChampionsWFA
             this.btnRenkDuzenle.Location = new System.Drawing.Point(531, 111);
             this.btnRenkDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.btnRenkDuzenle.Name = "btnRenkDuzenle";
-            this.btnRenkDuzenle.Size = new System.Drawing.Size(144, 35);
+            this.btnRenkDuzenle.Size = new System.Drawing.Size(166, 35);
             this.btnRenkDuzenle.TabIndex = 14;
             this.btnRenkDuzenle.Text = "Renk Düzenle";
             this.btnRenkDuzenle.UseVisualStyleBackColor = false;
@@ -781,7 +793,7 @@ namespace WeAreTheChampionsWFA
             this.btnRenkSil.Location = new System.Drawing.Point(531, 73);
             this.btnRenkSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnRenkSil.Name = "btnRenkSil";
-            this.btnRenkSil.Size = new System.Drawing.Size(144, 35);
+            this.btnRenkSil.Size = new System.Drawing.Size(166, 35);
             this.btnRenkSil.TabIndex = 13;
             this.btnRenkSil.Text = "Renk Sil";
             this.btnRenkSil.UseVisualStyleBackColor = false;
@@ -796,7 +808,7 @@ namespace WeAreTheChampionsWFA
             this.btnRenkEkle.Location = new System.Drawing.Point(531, 35);
             this.btnRenkEkle.Margin = new System.Windows.Forms.Padding(2);
             this.btnRenkEkle.Name = "btnRenkEkle";
-            this.btnRenkEkle.Size = new System.Drawing.Size(144, 34);
+            this.btnRenkEkle.Size = new System.Drawing.Size(166, 34);
             this.btnRenkEkle.TabIndex = 10;
             this.btnRenkEkle.Text = "Renk Ekle";
             this.btnRenkEkle.UseVisualStyleBackColor = false;
@@ -810,7 +822,7 @@ namespace WeAreTheChampionsWFA
             this.lstRenkler.ForeColor = System.Drawing.Color.White;
             this.lstRenkler.FormattingEnabled = true;
             this.lstRenkler.ItemHeight = 25;
-            this.lstRenkler.Location = new System.Drawing.Point(726, 27);
+            this.lstRenkler.Location = new System.Drawing.Point(748, 27);
             this.lstRenkler.Margin = new System.Windows.Forms.Padding(2);
             this.lstRenkler.Name = "lstRenkler";
             this.lstRenkler.Size = new System.Drawing.Size(226, 479);
@@ -1047,18 +1059,6 @@ namespace WeAreTheChampionsWFA
             this.label9.TabIndex = 0;
             this.label9.Text = "Oyuncunun Adı";
             // 
-            // chbFiltre
-            // 
-            this.chbFiltre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chbFiltre.AutoSize = true;
-            this.chbFiltre.Location = new System.Drawing.Point(728, 247);
-            this.chbFiltre.Name = "chbFiltre";
-            this.chbFiltre.Size = new System.Drawing.Size(203, 29);
-            this.chbFiltre.TabIndex = 8;
-            this.chbFiltre.Text = "Sonuçlanan Maçlar";
-            this.chbFiltre.UseVisualStyleBackColor = true;
-            this.chbFiltre.CheckedChanged += new System.EventHandler(this.chbFiltre_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1068,6 +1068,7 @@ namespace WeAreTheChampionsWFA
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1025, 659);
             this.Name = "Form1";
             this.Text = "We Are The Champions 1.0";
             this.tabControl1.ResumeLayout(false);
