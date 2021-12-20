@@ -4,7 +4,7 @@
 > Ayrýca oluþturulan karþlaþmalarýn skolarý girilip sonrasýnda deðiþtirilebilir ve fikstür sonuçlarý tutulabilir.
 > Sistemdeki bütün veriler iliþkisel veri tabanýnda tutulmuþtur.
 
-> <img src="" />
+> <img src="https://github.com/burcMnt/WeAreTheChampionsWFA/blob/master/WeAreTheChampionsWFA/Images/acilis.png" />
   <img src="" /> 
   <img src="" />  
   <img src="" />  

@@ -169,11 +169,12 @@
     <None Include="Resources\cim.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\acilis.png" />
-    <Content Include="Images\Oyuncular.png" />
-    <Content Include="Images\Renkler.png" />
-    <Content Include="Images\Takimlar.png" />
-    <Content Include="Images\YeniKarsilasmaOlustur.png" />
+    <Content Include="Images\acilis1.png" />
+    <Content Include="Images\karsilasma1.png" />
+    <Content Include="Images\oyuncu1.png" />
+    <Content Include="Images\renkler1.png" />
+    <Content Include="Images\sonuclananlar1.png" />
+    <Content Include="Images\takim1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
