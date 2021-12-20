@@ -168,6 +168,13 @@
   <ItemGroup>
     <None Include="Resources\cim.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\acilis.png" />
+    <Content Include="Images\Oyuncular.png" />
+    <Content Include="Images\Renkler.png" />
+    <Content Include="Images\Takimlar.png" />
+    <Content Include="Images\YeniKarsilasmaOlustur.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
